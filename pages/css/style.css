@@ -1,78 +1,296 @@
+body{
+    margin: 0px;
+}
 .navbar {
-    border: solid;
+  /* border: solid; */
 }
 /* navbar background image */
 .navbar-container {
-    background-image: url('https://duiatrailblazers.com/wp-content/uploads/2022/06/lucas-clara.png'); /* Set your background image URL */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    padding: 20px; /* Add some padding to the container if needed */
+  background-image: url("https://duiatrailblazers.com/wp-content/uploads/2022/06/lucas-clara.png"); /* Set your background image URL */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add some padding to the container if needed */
 }
+
 /* navbar background image */
 .navbar nav ul {
-    list-style: none;
-    /* list-style: none; */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Align items horizontally in the center */
+  list-style: none;
+  /* list-style: none; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Align items horizontally in the center */
 }
 
 .navbar nav ul li {
-    align-items: center;
-    margin-right: 20px; /* Spacing between list items */
-    display: flex; /* Make sure each list item is a flex item */
-    position: relative; /* Needed for pseudo-element positioning */
+  align-items: center;
+  margin-right: 20px; /* Spacing between list items */
+  display: flex; /* Make sure each list item is a flex item */
+  position: relative; /* Needed for pseudo-element positioning */
 }
 
 .navbar nav ul li:last-child {
-    margin-right: 0; /* Remove margin from the last list item */
+  margin-right: 0; /* Remove margin from the last list item */
 }
 
 .navbar nav ul li a {
-    color: white;
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: white;
-    text-decoration: none;
-    font-size: 16px; /* Font size */
-    font-weight: bold; /* Font weight */
-    padding: 10px 20px; /* Padding for each list item */
-    position: relative; /* Needed for pseudo-element positioning */
+  color: white;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Font weight */
+  padding: 10px 20px; /* Padding for each list item */
+  position: relative; /* Needed for pseudo-element positioning */
 }
 
 .navbar nav ul li a::before {
-    content: ''; /* Add content to the pseudo-element */
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0; /* Initially, set width to 0 */
-    height: 3px; /* Height of the line */
-    background-color: #9c0000; /* Color of the line */
-    transition: width 0.3s ease; /* Transition effect for width only */
-    z-index: -1; /* Ensure the line stays behind the text */
+  content: ""; /* Add content to the pseudo-element */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0; /* Initially, set width to 0 */
+  height: 3px; /* Height of the line */
+  background-color: #9c0000; /* Color of the line */
+  transition: width 0.3s ease; /* Transition effect for width only */
+  z-index: -1; /* Ensure the line stays behind the text */
 }
 
 .navbar nav ul li a:hover::before {
-    width: 100%; /* Expand the width to 100% on hover */
+  width: 100%; /* Expand the width to 100% on hover */
 }
 .navbar nav ul li img {
-    margin-right: 10px; /* Spacing between logo and text */
-    height: 100px;
-    width: 100px;
+  margin-right: 10px; /* Spacing between logo and text */
+  height: 100px;
+  width: 100px;
 }
 /* text_container */
-.text_container{
-    text-align: center;
-    color: white;
+.text_container {
+  text-align: center;
+  color: white;
 }
-.text_container h1{
-    text-align: center;
+.text_container h1 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+}
+/* text_container */
+
+/* form_booking_container */
+.form_booking_container {
+  /* border: solid; */
+  align-items: center;
+}
+.form_booking_container {
+  width: 50%; /* Adjust width as needed */
+  padding: 20px;
+  margin: auto; /* Center the container */
+  border-radius: 10px; /* Rounded corners */
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(0, 0, 0, 0.5)
+  ); /* Gradient background */
+  filter: blur(0); /* Initially no blur */
+  position: relative; /* Needed for absolute positioning */
+}
+.form_booking_container {
+  width: fit-content; /* Adjust width as needed */
+  padding: 20px; /* Add padding inside the container */
+
+  background-color: rgba(
+    240,
+    240,
+    240,
+    0.8
+  ); /* Background color with opacity */
+  border-radius: 10px; /* Rounded corners */
+  margin: auto; /* Center the container */
+}
+.form_booking_container {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  justify-content: center; /* Center the form on the page */
+  margin-top: 20px; /* Adjust as needed */
+}
+
+/* .form_booking_container option input datalist select {
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
-    color: white;
+    color: #9c0000;
+} */
+/* Style the input fields and select */
+
+input[type="text"],
+input[type="date"],
+select {
+  /* text-align: center; */
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 20px;
+  padding-left: 20px;
+  margin-right: 10px; /* Space between elements */
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners */
+  box-sizing: border-box;
 }
-/* text_container */
+input[type="text"]::after {
+  background-color: white; /* White background */
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+select option {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  background-color: white; /* White background */
+}
+/* input[type="text"] {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+} */
+
+/* Style the submit button */
+button {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  padding: 20px;
+  background-color: #403840;
+  color: white;
+  border: none;
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #403855;
+}
+/* form_booking_container */
+
+/* trees_image */
+.trees_image {
+  /* border: solid; */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center the image horizontally */
+  align-items: center; /* Center the image vertically */
+  height: 10vh;
+  width: 100%;
+}
+
+/* Style for the image */
+.trees_image img {
+  max-width: 100%; /* Optional: Set maximum image width to 100% of container */
+  height: 200px; /* Maintain aspect ratio */
+}
+/* trees_image */
+/* tours_and_travels */
+.tours_and_travels h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+.tours_and_travels {
+  /* border: solid; */
+}
+/* tours_and_travels */
+/* gallery */
+/* Style for the gallery container */
+.gallery {
+  margin-left: 200px;
+  padding: 20px;
+  display: flex; /* Use flexbox to create a two-column layout */
+  justify-content: space-between; /* Distribute space between the text and images */
+  align-items: center; /* Vertically align items in the center */
+}
+.gallery hr {
+  margin-right: 50vh;
+  width: 20%; /* Set the width as a percentage or a specific value (e.g., 200px) */
+  height: 2px; /* Set the height of the line */
+  background-color: #333; /* Set the background color */
+  border: none; /* Remove default border */
+  margin: 20px 0; /* Add margin for spacing */
+  opacity: 0.8; /* Set opacity if you want a slightly transparent line */
+}
+/* Style for the go_beyond_text container */
+.go_beyond_text h2 h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  border: solid;
+  width: fit-content;
+  flex: 1; /* Allow this element to take up 1 portion of the container */
+  text-align: left; /* Align the text to the left */
+}
+.go_beyond_text {
+  margin-left: 50px;
+  width: auto;
+  flex: 1; /* Allow this element to take up 1 portion of the container */
+  text-align: left; /* Align the text to the left */
+}
+
+/* Style for the gallery_images container */
+.gallery_images {
+  position: relative;
+  display: flex; /* Use flexbox to layout the images */
+  gap: 10px; /* Add space between images */
+  flex: 2; /* Allow this element to take up 2 portions of the container */
+}
+
+/* Style for the images */
+.gallery_images img {
+  max-width: 300px; /* Allow images to adjust their width based on available space */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Rounded corners for images */
+}
+/* Style for the image container */
+.image_container {
+  position: relative; /* Position the container relative to its contents */
+  display: inline-block; /* Treat each container as an inline block */
+}
+
+/* Style for the images */
+.image_container img {
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is displayed as a block */
+}
+
+/* Style for the text overlay */
+.image_text {
+  position: absolute; /* Position the text absolutely within the container */
+  bottom: 50px; /* Position the text 10px from the bottom */
+  right: 10px; /* Position the text 10px from the right */
+  color: white; /* Set the text color to white for better contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  padding: 5px; /* Add padding around the text */
+  border-radius: 5px; /* Optional: Rounded corners for the text background */
+  font-size: 25px; /* Adjust the font size as needed */
+  font-family: sans-serif; /* Specify the font family */
+}
+.image_text_title {
+  position: absolute; /* Position the text absolutely within the container */
+  bottom: 10px; /* Position the text 10px from the bottom */
+  right: 10px; /* Position the text 10px from the right */
+  color: white; /* Set the text color to white for better contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  padding: 5px; /* Add padding around the text */
+  border-radius: 5px; /* Optional: Rounded corners for the text background */
+  font-size: 14px; /* Adjust the font size as needed */
+  font-family: sans-serif; /* Specify the font family */
+}
+
+/* gallery */

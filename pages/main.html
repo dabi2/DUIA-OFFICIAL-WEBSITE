@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DUIA | TRAILBLAZER </title>
 </head>
+
 <body>
     <div class="body_section">
         <div class="navbar-container">
@@ -17,17 +21,91 @@
                     <ul>
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">TOURS AND TRAVEL</a></li>
-                        <li><img src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png" alt=""></li>
+                        <li><img src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png" alt="">
+                        </li>
                         <li><a href="#">ADVENTURE & ACADEMY</a></li>
                         <li><a href="#">CONTACT US</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="text_container">
-                <h1>Escape The Ordinary</h1>
+                <h1>Escape The <br> Ordinary</h1>
             </div>
+            <div class="form_booking_container">
+                <form action="" method="post">
+                    <select name="travel_type" required>
+                        <option value="" disabled selected>Where?</option>
+                        <option value="Nong_krem">Nong krem</option>
+                        <option value="Nong_krem">Nong krem</option>
+                        <option value="Nong_krem">Nong krem</option>
+                        <option value="Nong_krem">Nong krem</option>
+                        <!-- Add more travel types as needed -->
+                    </select>
+                    <!-- Where input field with dropdown option -->
+                    <!-- <input type="text" name="where" placeholder="Where?" list="locations" required>
+                    <datalist id="locations">
+                        <option value="Nong krem">
+                        <option value="Syntung">
+                        <option value="Noh kali Kai">
+                        <option value="Tokyo">
+                        <option value="Sydney">
+                    </datalist> -->
+
+                    <!-- Date input field -->
+                    <input type="date" name="date" required>
+
+                    <!-- Travel type dropdown -->
+                    <select name="travel_type" required>
+                        <option value="" disabled selected style="font-family: lato;">Select travel type</option>
+                        <option value="Leisure">Leisure</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Business">Business</option>
+                        <option value="Family">Family</option>
+                        <!-- Add more travel types as needed -->
+                    </select>
+
+                    <!-- Submit button -->
+                    <button type="submit">Find Your Tour</button>
+                </form>
+            </div>
+
         </div>
-        
+        <div class="trees_image">
+            <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/bare-tree-deciduous-z078327-600.jpg" alt="">
+        </div>
+        <div class="tours_and_travels">
+            <h1>TOURS & TRAVELS</h1>
+            <h1>Presenting The True Meghalayan Experience</h1>
+        </div>
+        <div class="gallery">
+            <div class="go_beyond_text">
+                <h2>Go Beyond Your <br> Imagination </h2>
+                <hr>
+                <h4>Discover Your Ideal Experience With Us</h4>
+            </div>
+            <div class="gallery_images">
+                <div class="image_container">
+                    <img src="images/gallerry.jpg" alt="">
+                    <span class="image_text">ECO RURAL TOURS</span>
+                    <span class="image_text_title">GERALD SAMUEL DUIA</span>
+                </div>
+                <div class="image_container">
+                    <img src="images/gallerry.jpg" alt="">
+                    <span class="image_text">CULTURE & HERITAGE</span>
+                    <span class="image_text_title">GERALD SAMUEL DUIA</span>
+                </div>
+                <div class="image_container">
+                    <img src="images/gallerry.jpg" alt="">
+                    <span class="image_text">ADVENTURE TOURS</span>
+                    <span class="image_text_title">GERALD SAMUEL DUIA</span>
+                </div>
+
+                <!-- <img src="images/gallerry.jpg" alt="">
+                <img src="images/gallerry.jpg" alt=""> -->
+            </div>
+            
+        </div>
     </div>
 </body>
+
 </html>
