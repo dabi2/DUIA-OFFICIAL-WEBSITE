@@ -1,0 +1,77 @@
+.navbar {
+    border: solid;
+}
+/* navbar background image */
+.navbar-container {
+    background-image: url('https://duiatrailblazers.com/wp-content/uploads/2022/06/lucas-clara.png'); /* Set your background image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding to the container if needed */
+}
+/* navbar background image */
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align items horizontally in the center */
+}
+
+.navbar nav ul li {
+    align-items: center;
+    margin-right: 20px; /* Spacing between list items */
+    display: flex; /* Make sure each list item is a flex item */
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+.navbar nav ul li:last-child {
+    margin-right: 0; /* Remove margin from the last list item */
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Font weight */
+    padding: 10px 20px; /* Padding for each list item */
+    position: relative; /* Needed for pseudo-element positioning */
+}
+
+.navbar nav ul li a::before {
+    content: ''; /* Add content to the pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0; /* Initially, set width to 0 */
+    height: 3px; /* Height of the line */
+    background-color: #9c0000; /* Color of the line */
+    transition: width 0.3s ease; /* Transition effect for width only */
+    z-index: -1; /* Ensure the line stays behind the text */
+}
+
+.navbar nav ul li a:hover::before {
+    width: 100%; /* Expand the width to 100% on hover */
+}
+.navbar nav ul li img {
+    margin-right: 10px; /* Spacing between logo and text */
+    height: 100px;
+    width: 100px;
+}
+/* text_container */
+.text_container{
+    text-align: center;
+    color: white;
+}
+.text_container h1{
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+}
+/* text_container */
