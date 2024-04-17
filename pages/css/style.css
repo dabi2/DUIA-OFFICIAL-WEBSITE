@@ -217,25 +217,29 @@ button:hover {
   align-items: center; /* Vertically align items in the center */
 }
 .gallery hr {
-  margin-right: 50vh;
-  width: 20%; /* Set the width as a percentage or a specific value (e.g., 200px) */
+  /* margin-right: 50vh; */
+  width: 35%; 
   height: 2px; /* Set the height of the line */
   background-color: #333; /* Set the background color */
   border: none; /* Remove default border */
   margin: 20px 0; /* Add margin for spacing */
-  opacity: 0.8; /* Set opacity if you want a slightly transparent line */
+  opacity: 0.8; 
+  margin-left: 60px;/* Set opacity if you want a slightly transparent line */
 }
 /* Style for the go_beyond_text container */
-.go_beyond_text h2 h4 {
+.go_beyond_text h4 {
   font-family: "Lato", sans-serif;
-  font-weight: 700;
   font-style: normal;
-  border: solid;
-  width: fit-content;
+  margin-left:60px ;
   flex: 1; /* Allow this element to take up 1 portion of the container */
   text-align: left; /* Align the text to the left */
 }
+.go_beyond_text h2{
+  /* border: solid; */
+  margin-left: 60px;
+}
 .go_beyond_text {
+  /* border: solid; */
   margin-left: 50px;
   width: auto;
   flex: 1; /* Allow this element to take up 1 portion of the container */
@@ -324,5 +328,16 @@ button:hover {
 .news_container img{
   width: 250px;
 }
-
 /* news_blog */
+/* container_course */
+.container_course{
+  border: solid;
+  margin-left: 200px;
+}
+.container_course h1{
+  border: solid;
+  position: relative;
+  margin-left: 150px;
+  margin-top: 60px;
+}
+/* container_course */
