@@ -294,3 +294,35 @@ button:hover {
 }
 
 /* gallery */
+/* news_blog */
+.news_blog{
+  margin-top: 200px;
+  text-align: center;
+}
+.news_blog h3{
+  color: #9c0000;
+}
+
+.news_blog hr {
+  margin: 0 auto;
+  width: 50%; /* Adjust the width as needed */
+  height: 2px;
+  background-color: #333;
+  border: none;
+  opacity: 0.8;
+  margin-bottom: 200px;
+}
+.news_container{
+  background-color: #ccc;
+  background-color: aliceblue;
+  border: solid;
+  display: flex;
+  gap: 5px;
+  padding: 20px;
+  justify-content: right;
+}
+.news_container img{
+  width: 250px;
+}
+
+/* news_blog */
