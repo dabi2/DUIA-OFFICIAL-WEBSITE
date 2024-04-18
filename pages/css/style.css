@@ -1,5 +1,5 @@
-body{
-    margin: 0px;
+body {
+  margin: 0px;
 }
 .navbar {
   /* border: solid; */
@@ -186,14 +186,22 @@ button:hover {
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
-  height: 10vh;
-  width: 100%;
+  height: 5vh;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  width: auto; /* Adjust width as needed */
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 /* Style for the image */
 .trees_image img {
-  max-width: 100%; /* Optional: Set maximum image width to 100% of container */
-  height: 200px; /* Maintain aspect ratio */
+  /* border: solid; */
+  width: 220px;
+  height: 276px;
+
+  /* max-width: 100%;
+  height: 200px; */
 }
 /* trees_image */
 /* tours_and_travels */
@@ -205,12 +213,13 @@ button:hover {
 }
 .tours_and_travels {
   /* border: solid; */
+  margin-top: 100px;
 }
 /* tours_and_travels */
 /* gallery */
 /* Style for the gallery container */
 .gallery {
-  margin-left: 200px;
+  margin-left: 10px;
   padding: 20px;
   display: flex; /* Use flexbox to create a two-column layout */
   justify-content: space-between; /* Distribute space between the text and images */
@@ -218,40 +227,47 @@ button:hover {
 }
 .gallery hr {
   /* margin-right: 50vh; */
-  width: 35%; 
+  width: 35%;
   height: 2px; /* Set the height of the line */
   background-color: #333; /* Set the background color */
   border: none; /* Remove default border */
   margin: 20px 0; /* Add margin for spacing */
-  opacity: 0.8; 
-  margin-left: 60px;/* Set opacity if you want a slightly transparent line */
+  opacity: 0.8;
+  /* margin-left: 60px; */
 }
 /* Style for the go_beyond_text container */
 .go_beyond_text h4 {
   font-family: "Lato", sans-serif;
   font-style: normal;
-  margin-left:60px ;
-  flex: 1; /* Allow this element to take up 1 portion of the container */
+  /* margin-left:60px ; */
+  /* flex: 1; */
   text-align: left; /* Align the text to the left */
 }
-.go_beyond_text h2{
+.go_beyond_text h2 {
   /* border: solid; */
-  margin-left: 60px;
+  /* margin-left: 60px; */
 }
 .go_beyond_text {
   /* border: solid; */
-  margin-left: 50px;
-  width: auto;
-  flex: 1; /* Allow this element to take up 1 portion of the container */
+  margin-left: 150px;
+  /* width: auto; */
+  /* flex: 1; */
   text-align: left; /* Align the text to the left */
 }
 
 /* Style for the gallery_images container */
 .gallery_images {
+  margin-left: 50px;
+  /* border: solid; */
   position: relative;
   display: flex; /* Use flexbox to layout the images */
   gap: 10px; /* Add space between images */
   flex: 2; /* Allow this element to take up 2 portions of the container */
+}
+.explore_more {
+  /* position: absolute; */
+  /* align-items: end; */
+  margin-top: 400px;
 }
 
 /* Style for the images */
@@ -299,45 +315,153 @@ button:hover {
 
 /* gallery */
 /* news_blog */
-.news_blog{
-  margin-top: 200px;
+.news_blog {
+  /* border: solid; */
+  margin-top: 50px;
   text-align: center;
 }
-.news_blog h3{
-  color: #9c0000;
+.news_blog h3 {
+  /* color: #9c0000; */
+  font-size: 25px;
+}
+.news_blog h1 {
+  /* color: #9c0000; */
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .news_blog hr {
   margin: 0 auto;
-  width: 50%; /* Adjust the width as needed */
+  width: 15%; /* Adjust the width as needed */
   height: 2px;
   background-color: #333;
   border: none;
   opacity: 0.8;
-  margin-bottom: 200px;
+  margin-bottom: 30px;
 }
-.news_container{
-  background-color: #ccc;
-  background-color: aliceblue;
-  border: solid;
-  display: flex;
-  gap: 5px;
-  padding: 20px;
-  justify-content: right;
-}
-.news_container img{
-  width: 250px;
-}
+
 /* news_blog */
 /* container_course */
-.container_course{
-  border: solid;
-  margin-left: 200px;
+.Discover_learn_overcome h4 {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  /* margin-left:60px ; */
+  /* flex: 1; */
+  text-align: left; /* Align the text to the left */
 }
-.container_course h1{
+.Discover_learn_overcome {
   border: solid;
-  position: relative;
   margin-left: 150px;
-  margin-top: 60px;
+  /* width: auto; */
+  /* flex: 1; */
+  text-align: left; /* Align the text to the left */
+}
+.Discover_gallery {
+  margin-left: 10px;
+  padding: 20px;
+  display: flex; /* Use flexbox to create a two-column layout */
+  justify-content: space-between; /* Distribute space between the text and images */
+  align-items: center; /* Vertically align items in the center */
+}
+.Discover_gallery hr {
+  /* margin-right: 50vh; */
+  width: 35%;
+  height: 2px; /* Set the height of the line */
+  background-color: #333; /* Set the background color */
+  border: none; /* Remove default border */
+  margin: 20px 0; /* Add margin for spacing */
+  opacity: 0.8;
+  /* margin-left: 60px; */
+}
+.Discover_gallery_images {
+  margin-left: 50px;
+  margin-right: 60px;
+  /* border: solid; */
+  position: relative;
+  display: flex; /* Use flexbox to layout the images */
+  gap: 10px; /* Add space between images */
+  flex: 2; /* Allow this element to take up 2 portions of the container */
+}
+.Discover_image_container {
+  position: relative; /* Position the container relative to its contents */
+  display: inline-block; /* Treat each container as an inline block */
+}
+.Discover_image_container img {
+  width: 100%; /* Adjust the width as needed */
+  height: 400px; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is displayed as a block */
+  border-radius: 5px;
+}
+.Discover_image_text {
+  position: absolute; /* Position the text absolutely within the container */
+  bottom: 50px; /* Position the text 10px from the bottom */
+  right: 10px; /* Position the text 10px from the right */
+  color: white; /* Set the text color to white for better contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  padding: 5px; /* Add padding around the text */
+  border-radius: 5px; /* Optional: Rounded corners for the text background */
+  font-size: 25px; /* Adjust the font size as needed */
+  font-family: sans-serif; /* Specify the font family */
+}
+.Discover_image_text_title {
+  position: absolute; /* Position the text absolutely within the container */
+  bottom: 10px; /* Position the text 10px from the bottom */
+  right: 10px; /* Position the text 10px from the right */
+  color: white; /* Set the text color to white for better contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
+  padding: 5px; /* Add padding around the text */
+  border-radius: 5px; /* Optional: Rounded corners for the text background */
+  font-size: 14px; /* Adjust the font size as needed */
+  font-family: sans-serif; /* Specify the font family */
+}
+.Discovery_gallery img {
+  max-width: 300px; /* Allow images to adjust their width based on available space */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: Rounded corners for images */
 }
 /* container_course */
+
+/* affilliate_company */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  /* min-width: 100%; */
+  width: 100px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: rgb(250, 0, 0);
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.prev {
+  left: 10px;
+  color: #333;
+}
+
+.next {
+  right: 10px;
+}
+
+/* affilliate_company */
