@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Endless Flow Carousel</title>
+    <style>
+        /* Basic styling for the carousel */
+        .carousel {
+            width: 100%;
+            height: 100px; /* Adjust height as needed */
+            overflow: hidden; /* Hide overflow */
+            position: relative;
+        }
+
+        /* Wrapper for the images */
+        .carousel-inner {
+            display: flex; /* Use flexbox for layout */
+            transition: transform 0.5s linear;
+            animation: scroll 20s linear infinite; /* Infinite loop animation */
+        }
+
+        /* Each image styling */
+        .carousel-inner img {
+            width: auto;
+            height: 100px; /* Match the carousel height */
+        }
+
+        /* Keyframes for the scrolling animation */
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%); /* Adjust as needed */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="carousel">
+        <div class="carousel-inner">
+            <!-- Image tags -->
+            <img src="images/affiliate_companies/ALLIED-Full-name-(1).jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/IFTO LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/meghalaya_tourism_logo.png" alt="Company Logo">
+            <img src="images/affiliate_companies/ort.jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/PRIME-Color.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TOAM FULL LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TGAM LOGO ONLY.png" alt="Company Logo">
+            <!-- Duplicate the images for smooth loop -->
+            <img src="images/affiliate_companies/ALLIED-Full-name-(1).jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/IFTO LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/meghalaya_tourism_logo.png" alt="Company Logo">
+            <img src="images/affiliate_companies/ort.jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/PRIME-Color.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TOAM FULL LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TGAM LOGO ONLY.png" alt="Company Logo">
+        </div>
+    </div>
+
+</body>
+
+</html>

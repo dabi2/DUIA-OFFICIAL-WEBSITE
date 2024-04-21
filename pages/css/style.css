@@ -421,47 +421,36 @@ button:hover {
 }
 /* container_course */
 
-/* affilliate_company */
+/* Basic styling for the carousel */
 .carousel {
+  margin-left: 100px;
+  padding: 50px;
+  margin-right: 100px;
+  height: 100px; /* Adjust height as needed */
+  overflow: hidden; /* Hide overflow */
   position: relative;
-  max-width: 100%;
-  overflow: hidden;
 }
 
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+/* Wrapper for the images */
+.carousel-inner {
+  display: flex; /* Use flexbox for layout */
+  transition: transform 0.5s linear;
+  animation: scroll 5s linear infinite; /* Infinite loop animation */
 }
 
-.slide {
-  /* min-width: 100%; */
-  width: 100px;
+/* Each image styling */
+.carousel-inner img {
+  width: auto;
+  height: 100px; /* Match the carousel height */
 }
 
-img {
-  width: 100%;
-  height: auto;
+/* Keyframes for the scrolling animation */
+@keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%); /* Adjust as needed */
+  }
 }
-
-.prev,
-.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: rgb(250, 0, 0);
-  padding: 10px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.prev {
-  left: 10px;
-  color: #333;
-}
-
-.next {
-  right: 10px;
-}
-
 /* affilliate_company */

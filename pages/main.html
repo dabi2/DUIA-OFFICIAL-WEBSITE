@@ -2,7 +2,34 @@
 <html lang="en">
 
 <head>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector('.carousel');
+            const carouselInner = carousel.querySelector('.carousel-inner');
+            const carouselItems = carousel.querySelectorAll('.carousel-item');
+            const totalItems = carouselItems.length;
+            let currentIndex = 0;
+            const slideWidth = carouselItems[0].offsetWidth;
 
+            function goToSlide(index) {
+                if (index < 0 || index >= totalItems) return;
+                currentIndex = index;
+                carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+
+            function slideNext() {
+                if (currentIndex < totalItems - 1) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    goToSlide(0);
+                }
+            }
+
+            setInterval(slideNext, 2000); // Change slide every 2 seconds
+        });
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -151,23 +178,31 @@
         </div>
     </div>
     <div class="carousel">
-        <div class="slides">
-            <div class="slide">
-                <img src="images/final_img/trees.png" alt="Slide 1">
-            </div>
-            <div class="slide">
-                <img src="images/final_img/C.png" alt="Slide 2">
-            </div>
-            <div class="slide">
-                <img src="images/final_img/trees.png" alt="Slide 1">
-            </div>
-
-
+        <div class="carousel-inner">
+            <!-- Image tags -->
+            <img src="images/affiliate_companies/ALLIED-Full-name-(1).jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/IFTO LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/meghalaya_tourism_logo.png" alt="Company Logo">
+            <img src="images/affiliate_companies/ort.jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/PRIME-Color.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TOAM FULL LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TGAM LOGO ONLY.png" alt="Company Logo">
+            <!-- Duplicate the images for smooth loop -->
+            <img src="images/affiliate_companies/ALLIED-Full-name-(1).jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/IFTO LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/meghalaya_tourism_logo.png" alt="Company Logo">
+            <img src="images/affiliate_companies/ort.jpg" alt="Company Logo">
+            <img src="images/affiliate_companies/PRIME-Color.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TOAM FULL LOGO.png" alt="Company Logo">
+            <img src="images/affiliate_companies/TGAM LOGO ONLY.png" alt="Company Logo">
         </div>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </div>
-    <script src="scripts.js"></script>
+    
+    <div class="Coming_soon">
+        <h1>COMING SOON</h1>
+        <h3>Northeast India Adventure & Travel Magazine</h3>
+
+    </div>
     <!-- body section -->
 </body>
 
