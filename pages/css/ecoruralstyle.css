@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: bold; */
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+  }
+  .eco_rural{
+    width: 100%;
+  }

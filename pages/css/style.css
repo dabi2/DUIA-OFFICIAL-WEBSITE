@@ -1,12 +1,18 @@
 body {
   margin: 0px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: bold; */
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
 }
 .navbar {
   /* border: solid; */
 }
 /* navbar background image */
 .navbar-container {
-  background-image: url("https://duiatrailblazers.com/wp-content/uploads/2022/06/lucas-clara.png"); /* Set your background image URL */
+  background-image: url("https://images.unsplash.com/photo-1698478224765-b1fb60f32b16?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); /* Set your background image URL */
   background-size: cover; /* Cover the entire container */
   background-position: center; /* Center the background image */
   padding: 20px; /* Add some padding to the container if needed */
@@ -70,9 +76,13 @@ body {
 /* text_container */
 .text_container {
   text-align: center;
+  /* width: fit-content; */
   color: white;
 }
 .text_container h1 {
+  /* background-color: #161616; */
+  font-size: 100px;
+  margin-top: 200px;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -87,8 +97,8 @@ body {
   align-items: center;
 }
 .form_booking_container {
-  width: 50%; /* Adjust width as needed */
-  padding: 20px;
+  width: 100%; /* Adjust width as needed */
+  /* padding: 20px; */
   margin: auto; /* Center the container */
   border-radius: 10px; /* Rounded corners */
   background: linear-gradient(
@@ -189,7 +199,6 @@ button:hover {
   height: 5vh;
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
-  width: auto; /* Adjust width as needed */
   display: flex;
   flex-wrap: nowrap;
 }
@@ -197,8 +206,8 @@ button:hover {
 /* Style for the image */
 .trees_image img {
   /* border: solid; */
-  width: 220px;
-  height: 276px;
+  width: 100%;
+  height: auto;
 
   /* max-width: 100%;
   height: 200px; */
@@ -350,14 +359,15 @@ button:hover {
   text-align: left; /* Align the text to the left */
 }
 .Discover_learn_overcome {
-  border: solid;
+  /* border: solid; */
   margin-left: 150px;
   /* width: auto; */
   /* flex: 1; */
   text-align: left; /* Align the text to the left */
 }
 .Discover_gallery {
-  margin-left: 10px;
+
+  /* margin-left: 100%; */
   padding: 20px;
   display: flex; /* Use flexbox to create a two-column layout */
   justify-content: space-between; /* Distribute space between the text and images */
@@ -365,7 +375,7 @@ button:hover {
 }
 .Discover_gallery hr {
   /* margin-right: 50vh; */
-  width: 35%;
+  width: 100%;
   height: 2px; /* Set the height of the line */
   background-color: #333; /* Set the background color */
   border: none; /* Remove default border */
@@ -454,3 +464,133 @@ button:hover {
   }
 }
 /* affilliate_company */
+/* Coming_soon */
+.Coming_soon{
+  text-align: center;
+}
+/* Coming_soon */
+/* clouds */
+.clouds img{
+  align-content: center;
+  /* margin-left: 50px; */
+  width: 100%;
+  /* border: solid; */
+}
+.clouds{
+/* border: solid; */
+}
+/* clouds */
+/* testtimonials */
+.testtimonials {
+text-align: center;
+}
+.testtimonials img{
+  display: inline-block;
+  margin: 0 20px;
+  /* aye lyrics */
+}
+/* testtimonials */
+/* footer */
+.footer {
+  background-color: #161616;
+  padding: 20px;
+}
+
+/* Column layout */
+.footer-columns {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+/* Column styles */
+.footer-column {
+  margin-right: 20px;
+}
+.footer-column p {
+  color: grey;
+}
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+.footer-column a {
+  text-decoration: none;
+  color: grey;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+.footer-column3 p{
+  color: grey;
+
+}
+.footer-column3 h3{
+font-size: 16px;
+}
+
+/* Image styles */
+.footer-image {
+  display: block;
+  width: 100px; /* Adjust image width as needed */
+  margin-bottom: 10px;
+}
+
+/* Text below image */
+.footer-image-text {
+  font-size: 20px;
+  /* font-family: ; */
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: bold; */
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+  color: white;
+  font-size: 14px;
+  /* text-align: center; */
+}
+
+/* Social media links */
+.social-media {
+  margin-top: 50px;
+  text-align: left;
+}
+
+.social-media a {
+  color: white;
+  /* margin-left: 10px; */
+}
+.social-media i {
+  color:  red;
+  /* border: solid; */
+  height: 50px;
+  width: 50px;
+  /* margin-left: 10px; */
+}
+
+.footer-column3{
+  margin-top: 50px;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+  .footer-columns {
+      flex-direction: column;
+  }
+
+  .footer-column {
+      margin-bottom: 20px;
+      margin-right: 0;
+  }
+}
+/* footer */
