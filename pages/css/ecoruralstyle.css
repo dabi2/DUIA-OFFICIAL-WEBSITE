@@ -7,6 +7,89 @@ body {
     font-variation-settings:
       "slnt" 0;
   }
-  .eco_rural{
+  .eco_rural_navbar-container {
+    background-image: url("Ecorural_background/mainbg.jpg"); /* Set your background image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding to the container if needed */
+  }
+  .eco_rural_text_container{
+    margin-top: 300px;
+  }
+  .eco_rural_text_container p {
+    /* border: solid; */
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    color: white;
+    font-weight: bold;
+
+  }
+  .eco_rural img{
     width: 100%;
   }
+  /* parent div */
+.kynthong_village{
+margin: 10px;
+/* border: solid; */
+display: flex;
+padding: 50px;
+align-content: space-between;
+}
+.kynthong_map{
+    /* border: solid; */
+}
+.kynthong_heading{
+    /* border: solid; */
+}
+.kynthong_img_container{
+    /* border: solid; */
+}
+.kynthong_village .kynthong_map,
+.kynthong_village .kynthong_heading,
+.kynthong_village .kynthong_img_container {
+    margin: 20px; 
+}
+.kynthong_img_container img{
+    margin-left: 90px;
+}
+.img_container_ecorural_tour{
+    /* border: solid; */
+    text-align: center;
+    align-content: center;
+    /* padding: 50px; */
+
+}
+.img_container_ecorural_tour img{
+    /* border: solid; */
+    align-content: center;
+    margin: 20px;
+}
+/* umden_parent_div */
+.umden_village{
+    margin: 10px;
+    /* border: solid; */
+    display: flex;
+    padding: 50px;
+    align-content: space-between;
+    }
+    .umden_map{
+        /* border: solid; */
+    }
+    .umden_heading{
+        /* border: solid; */
+    }
+    .umden_img_container{
+        /* border: solid; */
+    }
+    .umden_village .umden_map,
+    .umden_village .umden_heading,
+    .umden_village .umden_img_container {
+        margin: 20px; 
+    }
+    .umden_img_container img{
+        margin-left: 170px;
+        /* border: solid; */
+        /* border-color: red; */
+    }
+/* umden_parent_div */

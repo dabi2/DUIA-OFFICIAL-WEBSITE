@@ -2,13 +2,8 @@ body {
   margin: 0px;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: bold; */
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
-}
-.navbar {
-  /* border: solid; */
+  font-variation-settings: "slnt" 0;
 }
 /* navbar background image */
 .navbar-container {
@@ -45,42 +40,42 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: white;
   text-decoration: none;
-  font-size: 16px; /* Font size */
-  font-weight: bold; /* Font weight */
-  padding: 10px 20px; /* Padding for each list item */
-  position: relative; /* Needed for pseudo-element positioning */
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  position: relative;
+}
+/* transitions effect */
+.navbar nav ul li a {
+  position: relative;
 }
 
-.navbar nav ul li a::before {
-  content: ""; /* Add content to the pseudo-element */
+.navbar nav ul li a::after {
+  content: "";
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 0; /* Initially, set width to 0 */
-  height: 3px; /* Height of the line */
-  background-color: #9c0000; /* Color of the line */
-  transition: width 0.3s ease; /* Transition effect for width only */
-  z-index: -1; /* Ensure the line stays behind the text */
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #56efc4;
+  transition: width 0.3s ease, left 0.3s ease;
 }
-
-.navbar nav ul li a:hover::before {
-  width: 100%; /* Expand the width to 100% on hover */
+.navbar nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
 }
 .navbar nav ul li img {
-  margin-right: 10px; /* Spacing between logo and text */
+  margin-right: 10px;
   height: 100px;
   width: 100px;
 }
 /* text_container */
 .text_container {
   text-align: center;
-  /* width: fit-content; */
   color: white;
 }
 .text_container h1 {
-  /* background-color: #161616; */
   font-size: 100px;
   margin-top: 200px;
   text-align: center;
@@ -93,52 +88,42 @@ body {
 
 /* form_booking_container */
 .form_booking_container {
-  /* border: solid; */
   align-items: center;
 }
 .form_booking_container {
-  width: 100%; /* Adjust width as needed */
-  /* padding: 20px; */
-  margin: auto; /* Center the container */
-  border-radius: 10px; /* Rounded corners */
+  width: 100%;
+  margin: auto; 
+  border-radius: 10px;
   background: linear-gradient(
     to bottom,
     transparent,
     rgba(0, 0, 0, 0.5)
-  ); /* Gradient background */
-  filter: blur(0); /* Initially no blur */
-  position: relative; /* Needed for absolute positioning */
+  ); 
+  filter: blur(0); 
+  position: relative; 
 }
 .form_booking_container {
-  width: fit-content; /* Adjust width as needed */
-  padding: 20px; /* Add padding inside the container */
+  width: fit-content;
+  padding: 20px;
 
   background-color: rgba(
     240,
     240,
     240,
     0.8
-  ); /* Background color with opacity */
-  border-radius: 10px; /* Rounded corners */
-  margin: auto; /* Center the container */
+  );
+  border-radius: 10px;
+  margin: auto;
 }
 .form_booking_container {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
   display: flex;
-  justify-content: center; /* Center the form on the page */
-  margin-top: 20px; /* Adjust as needed */
+  justify-content: center;
+  margin-top: 20px;
 }
-
-/* .form_booking_container option input datalist select {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    color: #9c0000;
-} */
 /* Style the input fields and select */
-
 input[type="text"],
 input[type="date"],
 select {
@@ -165,12 +150,6 @@ select option {
   font-style: normal;
   background-color: white; /* White background */
 }
-/* input[type="text"] {
-    font-family: "Lato", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-} */
-
 /* Style the submit button */
 button {
   font-family: "Lato", sans-serif;
@@ -192,24 +171,20 @@ button:hover {
 
 /* trees_image */
 .trees_image {
-  /* border: solid; */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center the image horizontally */
-  align-items: center; /* Center the image vertically */
+  display: flex;
+  justify-content: center; 
+  align-items: center;
   height: 5vh;
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: nowrap;
 }
 
 /* Style for the image */
 .trees_image img {
-  /* border: solid; */
   width: 100%;
   height: auto;
-
-  /* max-width: 100%;
   height: 200px; */
 }
 /* trees_image */
@@ -221,7 +196,6 @@ button:hover {
   text-align: center;
 }
 .tours_and_travels {
-  /* border: solid; */
   margin-top: 100px;
 }
 /* tours_and_travels */
@@ -230,52 +204,42 @@ button:hover {
 .gallery {
   margin-left: 10px;
   padding: 20px;
-  display: flex; /* Use flexbox to create a two-column layout */
-  justify-content: space-between; /* Distribute space between the text and images */
-  align-items: center; /* Vertically align items in the center */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .gallery hr {
-  /* margin-right: 50vh; */
   width: 35%;
-  height: 2px; /* Set the height of the line */
-  background-color: #333; /* Set the background color */
-  border: none; /* Remove default border */
-  margin: 20px 0; /* Add margin for spacing */
+  height: 2px;
+  background-color: #333;
+  border: none;
+  margin: 20px 0;
   opacity: 0.8;
-  /* margin-left: 60px; */
 }
 /* Style for the go_beyond_text container */
 .go_beyond_text h4 {
   font-family: "Lato", sans-serif;
   font-style: normal;
-  /* margin-left:60px ; */
-  /* flex: 1; */
-  text-align: left; /* Align the text to the left */
+  text-align: left;
 }
 .go_beyond_text h2 {
   /* border: solid; */
   /* margin-left: 60px; */
 }
 .go_beyond_text {
-  /* border: solid; */
   margin-left: 150px;
-  /* width: auto; */
-  /* flex: 1; */
   text-align: left; /* Align the text to the left */
 }
 
 /* Style for the gallery_images container */
 .gallery_images {
   margin-left: 50px;
-  /* border: solid; */
   position: relative;
-  display: flex; /* Use flexbox to layout the images */
-  gap: 10px; /* Add space between images */
-  flex: 2; /* Allow this element to take up 2 portions of the container */
+  display: flex;
+  gap: 10px;
+  flex: 2;
 }
 .explore_more {
-  /* position: absolute; */
-  /* align-items: end; */
   margin-top: 400px;
 }
 
@@ -366,7 +330,6 @@ button:hover {
   text-align: left; /* Align the text to the left */
 }
 .Discover_gallery {
-
   /* margin-left: 100%; */
   padding: 20px;
   display: flex; /* Use flexbox to create a two-column layout */
@@ -457,34 +420,34 @@ button:hover {
 /* Keyframes for the scrolling animation */
 @keyframes scroll {
   from {
-      transform: translateX(0);
+    transform: translateX(0);
   }
   to {
-      transform: translateX(-50%); /* Adjust as needed */
+    transform: translateX(-50%); /* Adjust as needed */
   }
 }
 /* affilliate_company */
 /* Coming_soon */
-.Coming_soon{
+.Coming_soon {
   text-align: center;
 }
 /* Coming_soon */
 /* clouds */
-.clouds img{
+.clouds img {
   align-content: center;
   /* margin-left: 50px; */
   width: 100%;
   /* border: solid; */
 }
-.clouds{
-/* border: solid; */
+.clouds {
+  /* border: solid; */
 }
 /* clouds */
 /* testtimonials */
 .testtimonials {
-text-align: center;
+  text-align: center;
 }
-.testtimonials img{
+.testtimonials img {
   display: inline-block;
   margin: 0 20px;
   /* aye lyrics */
@@ -501,8 +464,7 @@ text-align: center;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  font-variation-settings: "slnt" 0;
   display: flex;
   color: white;
   justify-content: space-between;
@@ -528,15 +490,13 @@ text-align: center;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  font-variation-settings: "slnt" 0;
 }
-.footer-column3 p{
+.footer-column3 p {
   color: grey;
-
 }
-.footer-column3 h3{
-font-size: 16px;
+.footer-column3 h3 {
+  font-size: 16px;
 }
 
 /* Image styles */
@@ -554,8 +514,7 @@ font-size: 16px;
   font-optical-sizing: auto;
   /* font-weight: bold; */
   font-style: normal;
-  font-variation-settings:
-    "slnt" 0;
+  font-variation-settings: "slnt" 0;
   color: white;
   font-size: 14px;
   /* text-align: center; */
@@ -572,25 +531,25 @@ font-size: 16px;
   /* margin-left: 10px; */
 }
 .social-media i {
-  color:  red;
+  color: red;
   /* border: solid; */
   height: 50px;
   width: 50px;
   /* margin-left: 10px; */
 }
 
-.footer-column3{
+.footer-column3 {
   margin-top: 50px;
 }
 /* Responsive styles */
 @media (max-width: 768px) {
   .footer-columns {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .footer-column {
-      margin-bottom: 20px;
-      margin-right: 0;
+    margin-bottom: 20px;
+    margin-right: 0;
   }
 }
 /* footer */
