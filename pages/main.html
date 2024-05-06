@@ -30,6 +30,7 @@
             setInterval(slideNext, 2000);
         });
     </script>
+    <link rel="stylesheet" href="css/sticky_sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +47,14 @@
 </head>
 
 <body>
+    <div class="social-sidebar">
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <!-- Add more social media icons as needed -->
+        </ul>
+    </div>
     <!-- body section -->
     <div class="body_section">
         <div class="navbar-container">
@@ -74,16 +83,6 @@
                         <option value="Nong_krem">NONG KREM</option>
                         <!-- Add more travel types as needed -->
                     </select>
-                    <!-- Where input field with dropdown option -->
-                    <!-- <input type="text" name="where" placeholder="Where?" list="locations" required>
-                    <datalist id="locations">
-                        <option value="Nong krem">
-                        <option value="Syntung">
-                        <option value="Noh kali Kai">
-                        <option value="Tokyo">
-                        <option value="Sydney">
-                    </datalist> -->
-
                     <!-- Date input field -->
                     <input type="date" name="date" required>
 

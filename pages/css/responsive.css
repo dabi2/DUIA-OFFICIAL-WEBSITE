@@ -1,0 +1,24 @@
+/* Default styles */
+
+/* Add styles for tablet view (up to 768px) */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for tablet view */
+    .navbar ul li {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .eco_rural_text_container p {
+        font-size: 14px;
+    }
+    /* Add more adjustments as needed */
+}
+
+/* Add styles for mobile view (up to 480px) */
+@media only screen and (max-width: 480px) {
+    /* Adjustments for mobile view */
+    .eco_rural_text_container p {
+        font-size: 12px;
+    }
+    /* Add more adjustments as needed */
+}

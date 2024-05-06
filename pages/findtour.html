@@ -1,0 +1,67 @@
+<div class="form_booking_container">
+    <form id="tourForm">
+        <select name="location" required>
+            <option value="" disabled selected>Where?</option>
+            <option value="Living_Root_Bridge">Living Root Bridge</option>
+            <option value="Sohra">Sohra</option>
+            <option value="Laitlum">Laitlum</option>
+            <option value="Nong_Krem">Nong Krem</option>
+            <!-- Add more locations as needed -->
+        </select>
+        
+        <!-- Date input field -->
+        <input type="date" name="date" required>
+
+        <!-- Travel type dropdown -->
+        <select name="travel_type" required>
+            <option value="" disabled selected>Select travel type</option>
+            <option value="Leisure">Leisure</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Business">Business</option>
+            <option value="Family">Family</option>
+            <!-- Add more travel types as needed -->
+        </select>
+
+        <!-- Submit button -->
+        <button type="submit">Find Your Tour</button>
+    </form>
+
+    <!-- Recommended places will be displayed here -->
+    <div id="recommendedPlaces"></div>
+</div>
+
+<script>
+    document.getElementById("tourForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Get form data
+        const formData = new FormData(this);
+        const location = formData.get("location");
+        const date = formData.get("date");
+        const travelType = formData.get("travel_type");
+
+        // Dummy logic to generate recommended places (replace with actual logic)
+        let recommendedPlaces = [];
+
+        if (travelType === "Leisure") {
+            recommendedPlaces.push("Shillong Peak");
+            recommendedPlaces.push("Elephant Falls");
+        } else if (travelType === "Adventure") {
+            recommendedPlaces.push("Cherrapunji");
+            recommendedPlaces.push("Mawlynnong");
+            recommendedPlaces.push("dabiang");
+        } else if (travelType === "Business") {
+            recommendedPlaces.push("Shillong Golf Course");
+            recommendedPlaces.push("Don Bosco Centre for Indigenous Cultures");
+        } else if (travelType === "Family") {
+            recommendedPlaces.push("Ward's Lake");
+            recommendedPlaces.push("Police Bazaar");
+        }
+        // Display recommended places
+        const recommendedPlacesDiv = document.getElementById("recommendedPlaces");
+        recommendedPlacesDiv.innerHTML = "<h3>Recommended Places:</h3>";
+        recommendedPlaces.forEach(place => {
+            recommendedPlacesDiv.innerHTML += "<p>" + place + "</p>";
+        });
+    });
+</script>
