@@ -30,6 +30,24 @@
             setInterval(slideNext, 2000);
         });
     </script>
+    <!-- hamburgur -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu-list");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+    </script>
+    <!-- hamburgur -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/sticky_sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,16 +78,32 @@
         <div class="navbar-container">
             <div class="navbar">
                 <nav>
-                    <ul>
+                    <div class="logo">
+                        <img src="images/logo/Duia-Logo-png 2.png" alt="">
+                    </div>
+                    <div class="menu-toggle" onclick="toggleMenu()">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <ul class="menu" >
+                        
                         <li><a href="#">HOME</a></li>
-                        <li><a href="#">TOURS AND TRAVEL</a></li>
+                        <li><a href="#">DESTINATION</a></li>
                         <li><img src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png" alt="">
                         </li>
-                        <li><a href="#">ADVENTURE & ACADEMY</a></li>
-                        <li><a href="#">CONTACT US</a></li>
+                        <li><a href="#">TOURS</a></li>
+                        <li><a href="#">CONTACT</a></li>
                     </ul>
+                    <div class="list_of_items">
+                        <ul id="menu-list">
+                            <li><a href="">HOME</a></li> &nbsp;
+                            <li><a href="">DESTINATION</a></li> &nbsp;
+                            <li><a href="">TOURS</a></li> &nbsp;
+                            <li><a href="">CONTACT </a></li> &nbsp;
+                        </ul> 
+                    </div>
                 </nav>
             </div>
+
             <div class="text_container">
                 <h1>Escape The <br> Ordinary</h1>
             </div>
@@ -85,17 +119,14 @@
                     </select>
                     <!-- Date input field -->
                     <input type="date" name="date" required>
-
                     <!-- Travel type dropdown -->
                     <select name="travel_type" required>
-                        <option value="" disabled selected style="font-family: lato;">Select travel type</option>
+                        <option value="" disabled selected >Select travel type</option>
                         <option value="Leisure">Leisure</option>
                         <option value="Adventure">Adventure</option>
                         <option value="Business">Business</option>
                         <option value="Family">Family</option>
-                        <!-- Add more travel types as needed -->
                     </select>
-
                     <!-- Submit button -->
                     <button type="submit">Find Your Tour</button>
                 </form>
@@ -104,82 +135,102 @@
         </div>
         <div class="trees_image">
             <img src="images/final_img/Group 41103.png" alt="">
-            <!-- <img src="images/final_img/trees1.png" alt="">
-            <img src="images/final_img/trees.png" alt="">
-            <img src="images/final_img/trees.png" alt="">
-            <img src="images/final_img/trees.png" alt="">
-            <img src="images/final_img/trees.png" alt="">
-            <img src="images/final_img/trees1.png" alt=""> -->
-
-
         </div>
         <div class="tours_and_travels">
             <h1>TOURS & TRAVELS</h1>
             <h1>Presenting The True Meghalayan Experience</h1>
         </div>
-        <div class="gallery">
-            <div class="go_beyond_text">
-                <h2>Go Beyond Your <br> Imagination </h2>
+        <div class="container1">
+            <div class="container_text">
+                <h2>Go Beyond Your <br> Imagination hello</h2>
                 <hr>
-                <h4>Discover Your Ideal Experience With Us</h4>
+                <h4>Discover Your Ideal Experience With Us!</h4>
             </div>
-            <div class="gallery_images">
-                <div class="image_container">
-                    <img src="images/gallerry.jpg" alt="">
-                    <span class="image_text">ECO RURAL TOURS</span>
-                    <a href="ecorural_tour.html"><span class="image_text_title">Explore More</span></a>
+              <div class="gallery_container">
+                <div class="imgc1">
+                    <img src="images/container/container1.png" alt="">
+                    <div class="imgtext1">
+                        <h3>ECO RURAL TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
+                    <div class="imgtextmobile">
+                        <h3>ECO RURAL TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
                 </div>
-                <div class="image_container">
-                    <img src="images/gallerry.jpg" alt="">
-                    <span class="image_text">CULTURE & HERITAGE</span>
-                    <a href="#"><span class="image_text_title">Explore More</span></a>
+                <div class="imgc2">
+                    <img src="images/container/container2.png" alt="">
+                    <div class="imgtext2">
+                        <h3>CULTURE & HERITAGE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
+                    <div class="imgtextmobile">
+                        <h3>CULTURE & HERITAGE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
                 </div>
-                <div class="image_container">
-                    <img src="images/gallerry.jpg" alt="">
-                    <span class="image_text">ADVENTURE TOURS</span>
-                    <a href="#"><span class="image_text_title">Explore More</span></a>
-
-                    <!-- <span class="image_text_title">Explore More</span> -->
+                <div class="imgc3">
+                    <img src="images/container/container3.png" alt="">
+                    <div class="imgtext3">
+                        <h3>ADVENTURE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
+                    <div class="imgtextmobile">
+                        <h3>ADVENTURE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
                 </div>
-                <div class="explore_more">
-                    <a href="#"></a>
-
-                </div>
-            </div>
-
+              </div>
         </div>
-        <div class="news_blog">
+        <div class="tours_and_travels">
             <h1>DUIA TRAILBLAZERS ADVENTURE TRAINING ACADEMY</h1>
-            <h3>Embark on Adventure Sports Learning With Us!</h3>
-            <hr>
+            <p>EMBARK ON ADVENTURE SPORTS LEARNING WITH US!</p>
         </div>
-        <div class="Discover_gallery">
-            <div class="Discover_learn_overcome">
-                <h2>Discover, Learn,<br> Overcome </h2>
+        <!-- 2nd container-->
+        <div class="container1">
+            <div class="container_text">
+                <h2>Go Beyond Your <br> Imagination hello</h2>
                 <hr>
-                <h4>Unlock Your Adventure Potential</h4>
+                <h4>Discover Your Ideal Experience With Us!</h4>
             </div>
-            <div class="Discover_gallery_images">
-                <div class="Discover_image_container">
-                    <img src="images/gallerry.jpg" alt="">
-                    <span class="Discover_image_text">ECO RURAL TOURS</span>
-                    <a href="#"><span class="Discover_image_text_title">Explore More</span></a>
+              <div class="gallery_container">
+                <div class="imgc1">
+                    <img src="images/container/tourguide.png" alt="">
+                    <div class="imgtext11">
+                        <h3>ECO RURAL TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
+                    <div class="imgtextmobile1">
+                        <h3>ECO RURAL TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
                 </div>
-                <div class="Discover_image_container">
-                    <img src="images/gallerry.jpg" alt="">
-                    <span class="Discover_image_text">CULTURE & HERITAGE</span>
-                    <a href="#"><span class="Discover_image_text_title">Explore More</span></a>
+                <div class="imgc2">
+                    <img src="images/container/tourguide1.png" alt="">
+                    <div class="imgtext22">
+                        <h3>CULTURE & HERITAGE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
+                    <div class="imgtextmobile1">
+                        <h3>CULTURE & HERITAGE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
                 </div>
-                <div class="Discover_image_container">
-                    <img src="images/gallerry.jpg" alt="">
-                    <span class="Discover_image_text">ADVENTURE TOURS</span>
-                    <a href="#"><span class="Discover_image_text_title">Explore More</span></a>
-
-                    <!-- <span class="image_text_title">Explore More</span> -->
+                <div class="imgc3">
+                    <img src="images/container/tourguide2.png" alt="">
+                    <div class="imgtext33">
+                        <h3>ADVENTURE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
+                    <div class="imgtextmobile1">
+                        <h3>ADVENTURE TOURS</h3>
+                        <a href="">EXPLORE MORE</a>
+                    </div>
                 </div>
-            </div>
-
+              </div>
         </div>
+        <!-- 2nd container-->
+
     </div>
     <div class="carousel">
         <div class="carousel-inner">
@@ -217,7 +268,7 @@
         <img src="images/testimonials/testi1.png" alt="">
     </div>
     <!-- body section -->
-&nbsp;
+    &nbsp;
     <footer class="footer">
         <div class="footer-columns">
             <!-- Column 1: Image with text below -->

@@ -14,26 +14,21 @@ body {
 }
 
 /* navbar background image */
-.navbar nav ul {
+/* .navbar nav ul {
   list-style: none;
-  /* list-style: none; */
-  margin: 0;
-  padding: 0;
   display: flex;
-  justify-content: center; /* Align items horizontally in the center */
+  justify-content: center;
 }
 
 .navbar nav ul li {
   align-items: center;
-  margin-right: 20px; /* Spacing between list items */
-  display: flex; /* Make sure each list item is a flex item */
-  position: relative; /* Needed for pseudo-element positioning */
+  margin-right: 20px;
+  display: flex;
+  position: relative;
 }
-
-.navbar nav ul li:last-child {
-  margin-right: 0; /* Remove margin from the last list item */
+.drop_down_button{
+  display: none;
 }
-
 .navbar nav ul li a {
   color: white;
   text-align: center;
@@ -41,13 +36,8 @@ body {
   font-weight: 700;
   font-style: normal;
   text-decoration: none;
-  font-size: 16px;
   font-weight: bold;
   padding: 10px 20px;
-  position: relative;
-}
-/* transitions effect */
-.navbar nav ul li a {
   position: relative;
 }
 
@@ -69,6 +59,62 @@ body {
   margin-right: 10px;
   height: 100px;
   width: 100px;
+} */
+nav {
+  /* border: solid; */
+  position: relative;
+  text-align: center;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  /* display: none; */
+}
+
+.menu li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+#menu-list{
+  display: none;
+}
+.menu li a {
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: #ff0000; 
+  padding: 10px 20px;
+}
+
+.menu li a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-toggle {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+/* .menu{
+  display: none;
+} */
+
+/* .logo{
+  display: none;
+} */
+nav ul li img{
+  height: 100px;
+  width: 100px;
 }
 /* text_container */
 .text_container {
@@ -76,23 +122,30 @@ body {
   color: white;
 }
 .text_container h1 {
-  font-size: 100px;
-  margin-top: 200px;
+  /* font-size: 100px; */
+  /* margin-top: 200px; */
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
-  color: white;
+  /* color: white; */
 }
 /* text_container */
 
 /* form_booking_container */
 .form_booking_container {
+  /* background-color: #161616; */
   align-items: center;
+  border: solid;
+  text-align: center;
+}
+
+.form_booking_container form{
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 .form_booking_container {
-  width: 100%;
-  margin: auto; 
   border-radius: 10px;
   background: linear-gradient(
     to bottom,
@@ -104,14 +157,7 @@ body {
 }
 .form_booking_container {
   width: fit-content;
-  padding: 20px;
-
-  background-color: rgba(
-    240,
-    240,
-    240,
-    0.8
-  );
+  background-color: rgba(245, 43, 43, 0.8);
   border-radius: 10px;
   margin: auto;
 }
@@ -121,25 +167,24 @@ body {
   font-style: normal;
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
-/* Style the input fields and select */
+
 input[type="text"],
 input[type="date"],
 select {
-  /* text-align: center; */
+
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 20px;
   padding-left: 20px;
-  margin-right: 10px; /* Space between elements */
+  margin-right: 10px; 
   border: 1px solid #ccc;
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px; 
   box-sizing: border-box;
 }
 input[type="text"]::after {
-  background-color: white; /* White background */
+  background-color: white; 
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -148,9 +193,9 @@ select option {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
-  background-color: white; /* White background */
+  background-color: white; 
 }
-/* Style the submit button */
+
 button {
   font-family: "Lato", sans-serif;
   font-weight: 700;
@@ -159,11 +204,9 @@ button {
   background-color: #403840;
   color: white;
   border: none;
-  border-radius: 20px; /* Rounded corners */
+  border-radius: 20px;
   cursor: pointer;
 }
-
-/* Button hover effect */
 button:hover {
   background-color: #403855;
 }
@@ -191,24 +234,29 @@ button:hover {
 /* tours_and_travels */
 .tours_and_travels h1 {
   font-family: "Lato", sans-serif;
-  font-weight: 700;
+  font-weight: 700px;
+  font-style: normal;
+  text-align: center;
+}
+.tours_and_travels p {
+  font-family: "Lato", sans-serif;
+  font-weight: 700px;
   font-style: normal;
   text-align: center;
 }
 .tours_and_travels {
   margin-top: 100px;
 }
-/* tours_and_travels */
-/* gallery */
-/* Style for the gallery container */
-.gallery {
-  margin-left: 10px;
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container_text{
+  margin-top: 50px;
+  height: fit-content;
+  border: solid;
+  margin-right: 50px;
+  margin-left: 50px;
+  /* gap: 10px; */
 }
-.gallery hr {
+.container_text hr {
+  text-align: center;
   width: 35%;
   height: 2px;
   background-color: #333;
@@ -216,85 +264,119 @@ button:hover {
   margin: 20px 0;
   opacity: 0.8;
 }
-/* Style for the go_beyond_text container */
-.go_beyond_text h4 {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  text-align: left;
-}
-.go_beyond_text h2 {
-  /* border: solid; */
-  /* margin-left: 60px; */
-}
-.go_beyond_text {
-  margin-left: 150px;
-  text-align: left; /* Align the text to the left */
-}
 
-/* Style for the gallery_images container */
-.gallery_images {
-  margin-left: 50px;
-  position: relative;
+.container1{
+  margin-left: 20px;
+  margin-right: 20px;
+  border: solid;
+  width: fit-content;
   display: flex;
-  gap: 10px;
-  flex: 2;
 }
-.explore_more {
-  margin-top: 400px;
+.gallery_container{
+  display: flex;
+  gap: 20px;
+}
+.imgc1 img{
+  width: fit-content;
+}
+.imgtext1{
+  text-align: right;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  top: 125vh;
+  left: 75vh;
+}
+.imgtext1 a{
+  color: white;
+  text-decoration: none;
+}
+.imgtext2{
+  text-align: right;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  top: 125vh;
+  left: 106vh;
+}
+.imgtext2 a{
+  color: white;
+  text-decoration: none;
+}
+.imgtext3{
+  text-align: right;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  top: 125vh;
+  left: 160vh;
+}
+.imgtext3 a{
+  color: white;
+  text-decoration: none;
+}
+/* 2nd */
+.imgtext11{
+  text-align: right;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  top: 200vh;
+  left: 75vh;
+}
+.imgtext11 a{
+  color: white;
+  text-decoration: none;
+}
+.imgtext22{
+  text-align: right;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  top: 200vh;
+  left: 106vh;
+}
+.imgtext22 a{
+  color: white;
+  text-decoration: none;
+}
+.imgtext33{
+  text-align: right;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  top: 200vh;
+  left: 160vh;
+}
+.imgtext33 a{
+  color: white;
+  text-decoration: none;
 }
 
-/* Style for the images */
-.gallery_images img {
-  max-width: 300px; /* Allow images to adjust their width based on available space */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Optional: Rounded corners for images */
-}
-/* Style for the image container */
-.image_container {
-  position: relative; /* Position the container relative to its contents */
-  display: inline-block; /* Treat each container as an inline block */
+/* 2nd */
+
+.container2{
+  margin-left: 20px;
+  margin-right: 20px;
+  border: solid;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Style for the images */
-.image_container img {
-  width: 100%; /* Adjust the width as needed */
-  height: 400px; /* Maintain aspect ratio */
-  display: block; /* Ensure the image is displayed as a block */
+.container_text2{
+  margin-top: 50px;
+  height: fit-content;
+  border: solid;
+  margin-right: 50px;
+  margin-left: 50px;
 }
 
-/* Style for the text overlay */
-.image_text {
-  position: absolute; /* Position the text absolutely within the container */
-  bottom: 50px; /* Position the text 10px from the bottom */
-  right: 10px; /* Position the text 10px from the right */
-  color: white; /* Set the text color to white for better contrast */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
-  padding: 5px; /* Add padding around the text */
-  border-radius: 5px; /* Optional: Rounded corners for the text background */
-  font-size: 25px; /* Adjust the font size as needed */
-  font-family: sans-serif; /* Specify the font family */
-}
-.image_text_title {
-  position: absolute; /* Position the text absolutely within the container */
-  bottom: 10px; /* Position the text 10px from the bottom */
-  right: 10px; /* Position the text 10px from the right */
-  color: white; /* Set the text color to white for better contrast */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
-  padding: 5px; /* Add padding around the text */
-  border-radius: 5px; /* Optional: Rounded corners for the text background */
-  font-size: 14px; /* Adjust the font size as needed */
-  font-family: sans-serif; /* Specify the font family */
-}
-
-/* gallery */
-/* news_blog */
 .news_blog {
-  /* border: solid; */
   margin-top: 50px;
   text-align: center;
 }
 .news_blog h3 {
-  /* color: #9c0000; */
   font-size: 25px;
 }
 .news_blog h1 {
