@@ -1,0 +1,7 @@
+.culture_and_heritage {
+    background-image: url("culture_and_heritage/C&HT3.jpg"); /* Set your background image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding to the container if needed */
+    width: auto;
+  }

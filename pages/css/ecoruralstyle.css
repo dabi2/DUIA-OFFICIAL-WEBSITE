@@ -1,95 +1,151 @@
 body {
-    margin: 0px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    /* font-weight: bold; */
-    font-style: normal;
-    font-variation-settings:
-      "slnt" 0;
-  }
-  .eco_rural_navbar-container {
-    background-image: url("Ecorural_background/mainbg.jpg"); /* Set your background image URL */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    padding: 20px; /* Add some padding to the container if needed */
-  }
-  .eco_rural_text_container{
-    margin-top: 300px;
-  }
-  .eco_rural_text_container p {
-    /* border: solid; */
-    text-align: center;
-    font-family: "Lato", sans-serif;
-    font-style: normal;
-    color: white;
-    font-weight: bold;
-
-  }
-  .eco_rural img{
-    width: 100%;
-  }
-  /* parent div */
+  margin: 0px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: bold; */
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.eco_rural_navbar_container {
+  background-image: url("Ecorural_background/mainbg.jpg"); /* Set your background image URL */
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  padding: 20px; /* Add some padding to the container if needed */
+  width: auto;
+}
+.eco_rural_text_container {
+  margin-top: 300px;
+}
+.eco_rural_text_container p {
+  /* border: solid; */
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  color: white;
+  font-weight: bold;
+}
+.eco_rural img {
+  width: 100%;
+}
+/* parent div */
 .kynthong_village{
-margin: 10px;
-/* border: solid; */
-display: flex;
-padding: 50px;
-align-content: space-between;
-}
-.kynthong_map{
-    /* border: solid; */
-}
-.kynthong_heading{
-    /* border: solid; */
-}
-.kynthong_img_container{
-    /* border: solid; */
-}
-.kynthong_village .kynthong_map,
-.kynthong_village .kynthong_heading,
-.kynthong_village .kynthong_img_container {
-    margin: 20px; 
-}
-.kynthong_img_container img{
-    margin-left: 90px;
+    display: flex;
+    border: solid;
+    padding: 50px;
+    gap: 50px;
 }
 .img_container_ecorural_tour{
-    /* border: solid; */
-    text-align: center;
-    align-content: center;
-    /* padding: 50px; */
-
+    border: solid;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    
 }
 .img_container_ecorural_tour img{
-    /* border: solid; */
-    align-content: center;
-    margin: 20px;
+    border: solid;
+    text-align: center;
 }
+.align_straight{
+  border: solid;
+
+  justify-content: center;
+  padding: 80px;
+}
+.living_root_bridges{
+  /* border: solid; */
+}
+.living_root_bridges p{
+  width: 100%;
+}
+/* .living_root_bridges h1{
+  font-family: as;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: 10px;
+} */
+.living_root_bridges h1{
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 4.5px;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+.double_decker_living_root_bridges{
+  margin-top: 60px;
+  justify-content: center;
+  
+}
+.double_decker_living_root_bridges h2{
+  margin-top: 60px;
+  justify-content: center;
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 4.5px;
+  font-variation-settings:
+    "wdth" 100;
+  
+}
+/* .assistant-<uniquifier> {
+  font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+.double_decker_living_root_bridges p{
+  width: 185vh;
+  line-height: 35px;
+  /* font-family: "Assistant", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal; */
+
+}
+.double_decker_living_root_bridges img{
+  margin-top: 25px;
+  /* margin-left: 50px; */
+  text-align: center;
+  justify-content: center;
+}
+.triple_decker_living_root_bridges h2{
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 4.5px;
+  font-variation-settings:
+    "wdth" 100;
+
+}
+.triple_decker_living_root_bridges P{
+  width: 185vh;
+  line-height: 35px;
+  
+}
+.world_longest_living_root{
+  margin-top: 70px;
+}
+.world_longest_living_root h2{
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 4.5px;
+  font-variation-settings:
+    "wdth" 100;
+}
+.world_longest_living_root p{
+  width: 185vh;
+  line-height: 35px;
+}
+
+
 /* umden_parent_div */
-.umden_village{
-    margin: 10px;
-    /* border: solid; */
-    display: flex;
-    padding: 50px;
-    align-content: space-between;
-    }
-    .umden_map{
-        /* border: solid; */
-    }
-    .umden_heading{
-        /* border: solid; */
-    }
-    .umden_img_container{
-        /* border: solid; */
-    }
-    .umden_village .umden_map,
-    .umden_village .umden_heading,
-    .umden_village .umden_img_container {
-        margin: 20px; 
-    }
-    .umden_img_container img{
-        margin-left: 170px;
-        /* border: solid; */
-        /* border-color: red; */
-    }
+
 /* umden_parent_div */
