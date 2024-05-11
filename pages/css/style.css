@@ -224,15 +224,29 @@ button:hover {
 .imgc1 {
   position: relative;
   text-align: center;
-  color: rgb(231, 0, 0);
 }
 .imgc1 img{
   width: fit-content;
 }
 .bottom_text_test{
+  /* border: solid; */
+  /* margin: 10px; */
+  left: 10px;
+  color: white;
+  text-align: justify;
+  /* padding: 10px; */
   position: absolute;
-  bottom: 8px;
+  bottom: 20px;
+  font-weight: bold;
+  right: 10px;
+}
+.bottom_text_test a{
+  text-decoration: none;
+  text-align: justify;
+  position: absolute;
+  bottom: 1px;
   right: 16px;
+  color: white;
 }
 
 .imgtext1{

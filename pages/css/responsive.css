@@ -16,6 +16,7 @@
 
 /* Add styles for Desktop (up to 480px) Desktop view*/
 @media screen and (min-width: 768px) {
+
   .menu-toggle i{
     display: none;
     color: white;
@@ -35,6 +36,9 @@
 }
 /* mobile screen */
 @media screen and (max-width: 768px) {
+  .bottom_text_test{
+    display: none;
+  }
   .logo {
     /* border: solid; */
     align-items: start;
