@@ -74,7 +74,14 @@ body {
   font-variation-settings:
     "wdth" 100;
 }
+.syntein_img_container{
+  text-align: center;
 
+}
+.syntein_img_container img{
+  text-align: center;
+  
+}
 .double_decker_living_root_bridges{
   margin-top: 60px;
   justify-content: center;

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- BootStrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector('.carousel');
+            const carouselInner = carousel.querySelector('.carousel-inner');
+            const carouselItems = carousel.querySelectorAll('.carousel-item');
+            const totalItems = carouselItems.length;
+            let currentIndex = 0;
+            const slideWidth = carouselItems[0].offsetWidth;
+
+            function goToSlide(index) {
+                if (index < 0 || index >= totalItems) return;
+                currentIndex = index;
+                carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+
+            function slideNext() {
+                if (currentIndex < totalItems - 1) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    goToSlide(0);
+                }
+            }
+
+            setInterval(slideNext, 2000);
+        });
+    </script>
+    <!-- hamburgur -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu-list");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- hamburgur -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/sticky_sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUIA | TRAILBLAZER </title>
+</head>
+
+<body>
+    <div class="social-sidebar">
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <!-- Add more social media icons as needed -->
+        </ul>
+    </div>
+    <div class="adventure_tour">
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="images/logo/Duia-Logo-png 2.png" alt="">
+                </div>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <ul class="menu">
+
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">DESTINATION</a></li>
+                    <li><img src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png" alt="">
+                    </li>
+                    <li><a href="#">TOURS</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+                <div class="list_of_items">
+                    <ul id="menu-list">
+                        <li><a href="">HOME</a></li> &nbsp;
+                        <li><a href="">DESTINATION</a></li> &nbsp;
+                        <li><a href="">TOURS</a></li> &nbsp;
+                        <li><a href="">CONTACT </a></li> &nbsp;
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="eco_rural_text_container">
+            <div class="pre_text">
+                <pre>Experience adrenaline-fueled adventures with our Meghalaya Adventure </pre>
+                <pre>Tours. From treks through lush forests to thrilling canyoning expeditions, </pre>
+                <pre>each promises heart-pounding excitement amidst breathtaking landscapes.</pre>
+            </div>
+
+            <!-- <p>Experience adrenaline-fueled adventures with our Meghalaya Adventure Tours. From treks through lush
+                forests to thrilling canyoning expeditions, each promises heart-pounding excitement amidst breathtaking
+                landscapes.</p> -->
+            <!-- <p>Experience the authentic rural lifestyle in exclusive, untouched villages.</p>
+            <p>Immerse yourself in the daily lives of local communities, savor their </p>
+            <p>traditional cuisine, and stay at cozy homestays or travelers' nests. Explore</p>
+            <p>the village with a knowledgeable local guide.</p> -->
+        </div>
+    </div>
+    <div class="caving_body">
+        <h1>CAVING</h1>
+        <p>Journey on an exhilarating underground odyssey with Maw Mluh Caving, where the secrets of Meghalaya's hidden
+            world come to life. Venture deep into ancient limestone caves, hailed as a geo heritage site, where every
+            turn unveils breathtaking rock formations and mysterious chambers waiting to be discovered. Of special note,
+            the fossil unearthed within Maw Mluh Cave played a pivotal role in determining the Meghalayan age, adding an
+            intriguing layer of historical intrigue to our journey.</p>
+        <img src="images/adventure_tour/main_caving.png" alt="Caving">
+        <h1>CANYONING</h1>
+        <p>Canyoning, is the thrilling activity of exploring canyons by navigating through a combination of activities
+            such as hiking, scrambling, rappelling, swimming, jumping and sometimes even diving. In Mawlyngbna, this
+            adventure takes on a whole new dimension as participants traverse through beautiful gorges, plunge the
+            beautiful pools and slide down thrilling cascades.</p>
+        <img src="images/adventure_tour/Canyoning.png" alt="Caving">
+        <h1>CAMPING</h1>
+        <p>Camping in Meghalaya's Umpung and Shnongpdeng villages offers a serene retreat amidst lush greenery and
+            pristine rivers. As the sun sets, the tranquil ambiance is complemented by the soothing sounds of nature.
+            Under a blanket of stars, campers gather around crackling campfires, fostering connections and sharing
+            stories. Waking up to birdsong and the gentle flow of the river, each day promises new adventures, from
+            hiking through lush forests to kayaking along clear waters. It's an enriching escape into nature's embrace.
+        </p>
+        <img src="images/adventure_tour/camping.png" alt="Caving">
+        <h1>TREKKING</h1>
+        <p>Camping in Meghalaya's Umpung and Shnongpdeng villages offers a serene retreat amidst lush greenery and
+            pristine rivers. As the sun sets, the tranquil ambiance is complemented by the soothing sounds of nature.
+            Under a blanket of stars, campers gather around crackling campfires, fostering connections and sharing
+            stories. Waking up to birdsong and the gentle flow of the river, each day promises new adventures, from
+            hiking through lush forests to kayaking along clear waters. It's an enriching escape into nature's embrace.
+        </p>
+        <img src="images/adventure_tour/Nongblai_Trekking.png" alt="Caving">
+        <h1>WATERFALL RAPELLING</h1>
+        <p>Located just three hours from Shillong in Syntung village, the hidden gem of Shonghang waterfall awaits. This
+            475-meter gorge boasts a breathtaking cascade carved by millennia of flowing water. Upper Shonghang presents
+            a thrilling challenge with a 40ft rappel, including a daunting 25ft overhang. With expertise in swift water
+            techniques, adventurers can navigate this technical canyon. Yet, plans are underway to offer an alternative
+            exit route before the waterfall, making this exhilarating experience accessible to all tourists, regardless
+            of rappelling experience.
+        </p>
+        <img src="images/adventure_tour/waterfall_rapelling.png" alt="Caving">
+    </div>
+    <footer class="footer">
+        <div class="footer-columns">
+            <!-- Column 1: Image with text below -->
+            <div class="footer-column">
+                <img src="images/logo/Duia-Logo-png 2.png" alt="Image" class="footer-image">
+                <p class="footer-image-text">© Duia Trailblazers 2024</p>
+                <p>Website Design & Developed By <a href="">Denise</a>  & <a href=""> Dabiang</a></p>
+            </div>
+    
+            <!-- Column 2: List items -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="AboutUs.html">ABOUT US</a></li> &nbsp;
+                    <li><a href="">TEAM MEMBERS</a></li>&nbsp;
+                    <li><a href="">PRIVACY POLICY</a></li>&nbsp;
+                </ul>
+            </div>
+    
+            <!-- Column 3: Heading and paragraph -->
+            <div class="footer-column3">
+                <h3>OFFICE</h3>
+                <p>Prime Startup Hub, JN Stadium, Polo <br>
+                    Shillong - 793001 <br>
+                    Meghalaya</p>
+            </div>
+    
+            <!-- Column 4: Social media follow us -->
+            <div class="footer-column4 social-media">
+                <span>CONNECT</span> <br> <br>
+                <span>Contact</span> <br><br>
+                <a href="https://www.facebook.com/duiatrailblazers/"><i class="fab fa-facebook"></i></a> &nbsp;
+                <a href="https://www.youtube.com/@duiatrailblazers3564"><i class="fab fa-youtube"></i></a>&nbsp;
+                <a href="https://www.instagram.com/duiatrailblazers/"><i class="fab fa-instagram"></i></a>&nbsp;
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

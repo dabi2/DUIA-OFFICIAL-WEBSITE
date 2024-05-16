@@ -1,0 +1,44 @@
+body{
+  background-color: turquoise;
+}
+.culture_and_heritage {
+    /* background-image: url("culture_and_heritage/mainbg.jpg"); */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    width: auto;
+  }
+  .about_heading{
+    padding: 25px;
+    text-align: center;
+  }
+  .Duia_founder_paragraph{
+    justify-content: center;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+  }
+  .get_in_touch{
+    text-align: center;
+  }
+  .office_location_parent{
+    justify-content: center;
+    display: flex;
+  }
+  .office_location{
+    gap: 100px;
+    display: flex;
+    align-items: center;
+  }
+  .founder_main{
+    justify-content: center;
+    text-align: center;
+  }
+  .team_members_parent{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+  }
+  .team_members_child{
+    text-align: center;
+  }

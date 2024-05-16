@@ -16,6 +16,15 @@
 
 /* Add styles for Desktop (up to 480px) Desktop view*/
 @media screen and (min-width: 768px) {
+  /* .d-flex{
+    display: none;
+  }
+  .form-control{
+    display: none;
+  }
+  .btn{
+    display: none;
+  } */
 
   .menu-toggle i{
     display: none;
@@ -39,20 +48,31 @@
   .bottom_text_test{
     display: none;
   }
-  .logo {
-    /* border: solid; */
-    align-items: start;
-    text-align: left;
+  /* .logo {
+    margin: 0px;
+    width: 50px;
+    height: 50px;
   }
   .logo img {
-    /* border: solid; */
-    /* align-items: baseline; */
-    height: 100%;
-    width: 20%;
+
+  } */
+  nav{
+    justify-content: space-between;
+  }
+  .morron{
+    display: flex;
+    justify-content: space-around;
+  }
+  .moro img{
+    margin-left:0px ;
+    height: 50px;
+    width: 50px;
   }
   .menu-toggle {
-    display: none;
     color: white;
+  }
+  .list_of_items{
+    border: solid;
   }
   .menu {
     display: none;
@@ -63,7 +83,6 @@
   }
   #menu-list li a {
     color: black;
-    /* font-weight: bold; */
     text-decoration: none;
     font-size: 16px;
     text-align: center;
@@ -71,17 +90,14 @@
   .text_container h1 {
     color: white;
     font-size: 50px;
-    /* font */
   }
   .form_booking_container {
-    border: solid;
     display: flex;
     flex-direction: column;
     text-align: center;
   }
   .form_booking_container form {
     display: inline-block;
-    border: solid;
     text-align: center;
     border-radius: 10px;
   }
@@ -130,7 +146,7 @@
     flex-direction: column;
   }
   .container1{
-    border: solid;
+    /* border: solid; */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -145,7 +161,12 @@
     margin-left: 110px;
     opacity: 0.8;
   }
+  .container_text hr{
+    margin-left: 50px;
+    color: red;
+  }
   .container_text{
+
     display: flex;
     flex-direction: column;
   }
@@ -168,6 +189,15 @@
     color: grey;
     border-radius: 5px;
   }
+  .carousel{
+    margin: 0;
+    justify-content: start;
+    /* width: 100%; */
+  }
+  .carousel_inner{
+    justify-content: center;
+  }
+
   /* ECO_RURAL_TOUR */
   .kynthong_village{
     display: flex;

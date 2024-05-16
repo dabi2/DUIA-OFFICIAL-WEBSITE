@@ -1,0 +1,41 @@
+.adventure_tour {
+    background-image: url("adventure_tour/bgadventure.png"); /* Set your background image URL */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the background image */
+    padding: 20px; /* Add some padding to the container if needed */
+    width: auto;
+  }
+  .pre_text{
+    border: solid;
+    align-items: center;
+    align-content: center;
+}
+  
+  .pre_text pre{
+    text-align: center;
+    color: white;
+    line-height: 20px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normalś;
+
+  }
+  .caving_body{
+    border: solid;
+    padding: 100px;
+  }
+  .caving_body h1{
+    font-family: "Asap", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 4.5px;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  .caving_body {
+    line-height: 35px;
+  }
+  .caving_body img{
+    width: 100%;
+  }

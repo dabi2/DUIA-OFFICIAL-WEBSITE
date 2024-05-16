@@ -1,7 +1,40 @@
 .culture_and_heritage {
-    background-image: url("culture_and_heritage/C&HT3.jpg"); /* Set your background image URL */
+    background-image: url("culture_and_heritage/mainbg.jpg"); /* Set your background image URL */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the background image */
     padding: 20px; /* Add some padding to the container if needed */
     width: auto;
+  }
+  .Mawphlang_lawkyntang_cont{
+    padding: 100px;
+    /* border: solid; */
+    display: flex;
+    gap: 50px;
+    /* margin: 50px; */
+  }
+  .Mawphlang_lawkyntang_cont img{
+    border: solid;
+    /* width: 100%; */
+  }
+  .Mawphlang_lawkyntang_contents{
+  }
+  .Mawphlang_lawkyntang_contents h1{
+    font-family: "Asap", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 4.5px;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  .Mawphlang_lawkyntang_contents p{
+    /* border: solid; */
+    line-height: 35px;
+  }
+  .lawkyntangbigI img{
+    width: 100%;
+  }
+  .lawkyntangbigI{
+    /* border: solid; */
+    padding: 100px;
   }

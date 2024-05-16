@@ -5,6 +5,10 @@ body {
   font-style: normal;
   font-variation-settings: "slnt" 0;
 }
+/* .body_section{
+  border: solid;
+  color: red;
+} */
 /* navbar background image */
 .navbar-container {
   background-image: url("mainLanding.png"); /* Set your background image URL */
@@ -13,11 +17,16 @@ body {
   padding: 20px;
   height: 50vh;
 }
-nav {
-  /* border: solid; */
-  position: relative;
-  text-align: center;
+.navi{
+  border: solid;
 }
+/* .navbar{
+  justify-content: center;
+
+} */
+/* nav {
+  border: solid;
+} */
 
 .menu {
   list-style-type: none;
@@ -173,8 +182,8 @@ button:hover {
 /* Style for the image */
 .trees_image img {
   width: 100%;
-  height: auto;
-  height: 200px; 
+  /* height: auto; */
+  /* height: 200px;  */
 }
 /* trees_image */
 /* tours_and_travels */
@@ -192,6 +201,8 @@ button:hover {
 }
 .tours_and_travels {
   margin-top: 100px;
+  padding: 10px;
+  margin: 90px;
 }
 .container_text{
   margin-top: 50px;
@@ -205,16 +216,12 @@ button:hover {
   height: 2px;
   background-color: #333;
   border: none;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   opacity: 0.8;
 }
 
 .container1{
-  /* margin-left: 20px; */
-  /* margin-right: 20px; */
-  /* border: solid; */
   justify-content: center;
-
   display: flex;
 }
 .gallery_container{
@@ -231,104 +238,30 @@ button:hover {
 .bottom_text_test{
   /* border: solid; */
   /* margin: 10px; */
-  left: 10px;
+  /* left: 10px; */
   color: white;
-  text-align: justify;
-  /* padding: 10px; */
+  /* text-align: justify; */
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   font-weight: bold;
-  right: 10px;
 }
 .bottom_text_test a{
   text-decoration: none;
   text-align: justify;
-  position: absolute;
-  bottom: 1px;
-  right: 16px;
+  /* position: absolute; */
+  /* bottom: 1px;
+  right: 16px; */
   color: white;
 }
-
-.imgtext1{
-  text-align: right;
-  color: white;
-  width: fit-content;
-  position: absolute;
-  top: 125vh;
-  left: 75vh;
+.bottom_text_test h2{
+  font-size: 20px;
+  /* color: rgb(255, 0, 0); */
 }
-.imgtext1 a{
-  color: white;
-  text-decoration: none;
-}
-.imgtext2{
-  text-align: right;
-  color: white;
-  width: fit-content;
-  position: absolute;
-  top: 125vh;
-  left: 106vh;
-}
-.imgtext2 a{
-  color: white;
-  text-decoration: none;
-}
-.imgtext3{
-  text-align: right;
-  color: white;
-  width: fit-content;
-  position: absolute;
-  top: 125vh;
-  left: 160vh;
-}
-.imgtext3 a{
-  color: white;
-  text-decoration: none;
-}
-/* 2nd */
-.imgtext11{
-  text-align: right;
-  color: white;
-  width: fit-content;
-  position: absolute;
-  top: 200vh;
-  left: 75vh;
-}
-.imgtext11 a{
-  color: white;
-  text-decoration: none;
-}
-.imgtext22{
-  text-align: right;
-  color: white;
-  width: fit-content;
-  position: absolute;
-  top: 200vh;
-  left: 106vh;
-}
-.imgtext22 a{
-  color: white;
-  text-decoration: none;
-}
-.imgtext33{
-  text-align: right;
-  color: white;
-  width: fit-content;
-  position: absolute;
-  top: 200vh;
-  left: 160vh;
-}
-.imgtext33 a{
-  color: white;
-  text-decoration: none;
-}
-
-/* 2nd */
 
 .container2{
   margin-left: 20px;
   margin-right: 20px;
-  border: solid;
+  /* border: solid; */
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -337,7 +270,7 @@ button:hover {
 .container_text2{
   margin-top: 50px;
   height: fit-content;
-  border: solid;
+  /* border: solid; */
   margin-right: 50px;
   margin-left: 50px;
 }
@@ -448,23 +381,23 @@ button:hover {
 
 /* Basic styling for the carousel */
 .carousel {
+  margin: 100px;
   margin-left: 100px;
-  padding: 50px;
   margin-right: 100px;
-  height: 100px; /* Adjust height as needed */
+  /* height: 100px; */
   overflow: hidden; /* Hide overflow */
   position: relative;
 }
 
 /* Wrapper for the images */
-.carousel-inner {
+.carousel_inner {
   display: flex; /* Use flexbox for layout */
   transition: transform 0.5s linear;
   animation: scroll 5s linear infinite; /* Infinite loop animation */
 }
 
 /* Each image styling */
-.carousel-inner img {
+.carousel_inner img {
   width: auto;
   height: 100px; /* Match the carousel height */
 }

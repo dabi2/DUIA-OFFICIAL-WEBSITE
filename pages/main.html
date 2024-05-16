@@ -2,7 +2,37 @@
 <html lang="en">
 
 <head>
+    <style>
+        #escape_the_ordinary{
+            /* border: solid; */
+            color: white;
+            text-align: center;
+        }
+        .navbar-nav {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
 
+        .background_of_main_body {
+            background-image: url("images/mainLanding.png");
+            /* Set your background image URL */
+            background-size: cover;
+            /* Cover the entire container */
+            background-position: center;
+            /* Center the background image */
+            padding: 20px;
+            height: 50vh;
+        }
+    </style>
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- BootStrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -40,7 +70,6 @@
                 menu.style.display = "block";
             }
         }
-
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -76,21 +105,89 @@
             <!-- Add more social media icons as needed -->
         </ul>
     </div>
+    <div class="background_of_main_body">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 centered-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <a class="navbar-brand" href="#"><img src="images/logo/Duia-Logo-png 1.png" alt=""></a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 id="escape_the_ordinary">ESCAPE <br> THE <br>ORDINARY</h1>
+        <div class="form_booking_container">
+            <form action="" method="post">
+                <select name="travel_type" required>
+                    <option value="" disabled selected>Where?</option>
+                    <option value="Nong_krem">LIVING ROOT BRIDGE</option>
+                    <option value="Nong_krem">SOHRA</option>
+                    <option value="Nong_krem">LAITLUM</option>
+                    <option value="Nong_krem">NONG KREM</option>
+                </select>
+                <input type="date" name="date" required>
+                <select name="travel_type" required>
+                    <option value="" disabled selected>Select travel type</option>
+                    <option value="Leisure">Leisure</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Business">Business</option>
+                    <option value="Family">Family</option>
+                </select>
+                <button type="submit">Find Your Tour</button>
+            </form>
+        </div>
+    </div>
+   
+
     <!-- body section -->
-    <div class="body_section"> 
-        <div class="navbar-container">
+
+    <!-- <div class="navbar-container">
             <div class="navbar">
+                
                 <nav>
                     <div class="logo">
-                        <img src="images/logo/Duia-Logo-png 2.png" alt="">
+                        <div class="moro">
+                            <img src="images/logo/Duia-Logo-png 2.png" alt="">
+                        </div>
                     </div>
                     <div class="menu-toggle" onclick="toggleMenu()">
                         <i class="fa fa-bars"></i>
                     </div>
+                    
                     <ul class="menu">
                         <li><a href="#">HOME</a></li>
                         <li><a href="#">DESTINATION</a></li>
-                        <li><img src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png" alt="">
+                        <li><a href="main.html"><img
+                                    src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png"
+                                    alt=""></a>
                         </li>
                         <li><a href="#">TOURS</a></li>
                         <li><a href="#">CONTACT</a></li>
@@ -116,11 +213,8 @@
                         <option value="Nong_krem">SOHRA</option>
                         <option value="Nong_krem">LAITLUM</option>
                         <option value="Nong_krem">NONG KREM</option>
-                        <!-- Add more travel types as needed -->
                     </select>
-                    <!-- Date input field -->
                     <input type="date" name="date" required>
-                    <!-- Travel type dropdown -->
                     <select name="travel_type" required>
                         <option value="" disabled selected>Select travel type</option>
                         <option value="Leisure">Leisure</option>
@@ -128,18 +222,19 @@
                         <option value="Business">Business</option>
                         <option value="Family">Family</option>
                     </select>
-                    <!-- Submit button -->
                     <button type="submit">Find Your Tour</button>
                 </form>
             </div>
-        </div>
-        <div class="trees_image">
-            <img src="images/final_img/Group 41103.png" alt="">
-        </div>
-        <div class="tours_and_travels">
+        </div> -->
+    <div class="trees_image">
+        <img src="images/final_img/Group 41103.png" alt="">
+    </div>
+    <div class="body_section">
+        <div class="tours_and_travels display">
             <h1>TOURS & TRAVELS</h1>
             <h1>Presenting The True Meghalayan Experience</h1>
         </div>
+        &nbsp;
         <div class="container1">
             <div class="container_text">
                 <h2>Go Beyond Your <br> Imagination hello</h2>
@@ -181,7 +276,7 @@
                     <img src="images/container/container3.png" alt="">
                     <div class="bottom_text_test">
                         <h2>ADVENTURE TOURS</h2>
-                        <a href="">Explore Here</a>
+                        <a href="adventure_tour.html">Explore Here</a>
                     </div>
 
                     <!-- <div class="imgtext3">
@@ -258,7 +353,7 @@
 
     </div>
     <div class="carousel">
-        <div class="carousel-inner">
+        <div class="carousel_inner">
             <!-- Image tags -->
             <img src="images/affiliate_companies/ALLIED-Full-name-(1).jpg" alt="Company Logo">
             <img src="images/affiliate_companies/IFTO LOGO.png" alt="Company Logo">
@@ -300,12 +395,13 @@
             <div class="footer-column">
                 <img src="images/logo/Duia-Logo-png 2.png" alt="Image" class="footer-image">
                 <p class="footer-image-text">© Duia Trailblazers 2024</p>
+                <p>Website Design & Developed By <a href="">Denise</a> & <a href=""> Dabiang</a></p>
             </div>
 
             <!-- Column 2: List items -->
             <div class="footer-column">
                 <ul>
-                    <li><a href="">ABOUT US</a></li> &nbsp;
+                    <li><a href="AboutUs.html">ABOUT US</a></li> &nbsp;
                     <li><a href="">TEAM MEMBERS</a></li>&nbsp;
                     <li><a href="">PRIVACY POLICY</a></li>&nbsp;
                 </ul>

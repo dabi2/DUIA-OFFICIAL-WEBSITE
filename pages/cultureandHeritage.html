@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- BootStrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- BootStrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carousel = document.querySelector('.carousel');
+            const carouselInner = carousel.querySelector('.carousel-inner');
+            const carouselItems = carousel.querySelectorAll('.carousel-item');
+            const totalItems = carouselItems.length;
+            let currentIndex = 0;
+            const slideWidth = carouselItems[0].offsetWidth;
+
+            function goToSlide(index) {
+                if (index < 0 || index >= totalItems) return;
+                currentIndex = index;
+                carouselInner.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+
+            function slideNext() {
+                if (currentIndex < totalItems - 1) {
+                    goToSlide(currentIndex + 1);
+                } else {
+                    goToSlide(0);
+                }
+            }
+
+            setInterval(slideNext, 2000);
+        });
+    </script>
+    <!-- hamburgur -->
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu-list");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/culture_&_heritage.css">
-     <!-- assistant -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link
-         href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Assistant:wght@200..800&family=Inter:wght@100..900&display=swap"
-         rel="stylesheet">
-     <!-- assistant -->
- 
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link
-         href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&display=swap"
-         rel="stylesheet">
-     <!-- responsive -->
-     <link rel="stylesheet" href="css/responsive.css">
-     <link rel="stylesheet" href="css/sticky_sidebar.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-     <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="css/ecoruralstyle.css">
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- hamburgur -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/sticky_sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CULTURE AND HERITAGE</title>
+    <title>DUIA | TRAILBLAZER </title>
 </head>
+
 <body>
     <div class="social-sidebar">
         <ul>
@@ -73,8 +115,96 @@
             <p>traditional cuisine, and stay at cozy homestays or travelers' nests. Explore</p>
             <p>the village with a knowledgeable local guide.</p>
         </div>
-
-
     </div>
+    <div class="culture_and_heritage_body">
+        <div class="Mawphlang_lawkyntang_cont">
+            <img src="images/culture_and_heritage/lawkyntangmap.png" alt="">
+            <div class="Mawphlang_lawkyntang_contents">
+                <h1>MAWPHLANG LAWKYNTANG</h1>
+                <p>Meghalaya Lawkyntang, also known as sacred groves, are revered sanctuaries of nature deeply ingrained
+                    in the cultural fabric of Meghalaya. These pristine forests, left untouched by human intervention,
+                    serve as sacred sites where ancient rituals and traditions are preserved. Each Lawkyntang is a haven
+                    of biodiversity, housing rare flora and fauna, and embodying the harmonious relationship between the
+                    Khasi people and their natural surroundings. These sacred groves stand as living testaments to the
+                    indigenous conservation practices and spiritual beliefs of the region, offering visitors a glimpse
+                    into the profound connection between culture, ecology, and reverence for the Earth.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lawkyntangbigI">
+        <img src="images/culture_and_heritage/lawkyntangbigI.png" alt="">
+    </div>
+    <div class="culture_and_heritage_body">
+        <div class="Mawphlang_lawkyntang_cont">
+            <img src="images/culture_and_heritage/nartiangmegalithmap.png" alt="">
+            <div class="Mawphlang_lawkyntang_contents">
+                <h1>NARTIANG MEGALITHIC PARK</h1>
+                <p>Nartiang Megalithic Park, nestled in the serene landscapes of Meghalaya, stands as a testament to the
+                    ancient heritage of the Khasi people. This archaeological marvel showcases a collection of ancient
+                    monoliths, believed to be erected centuries ago by tribal communities for various ceremonial and
+                    ritualistic purposes. Steeped in history and mystery, the park offers visitors a glimpse into the
+                    cultural significance and craftsmanship of these imposing stone structures, making it a fascinating
+                    destination for history enthusiasts and curious travelers alike.</p>
+            </div>
+        </div>
+    </div>
+    <div class="lawkyntangbigI">
+        <img src="images/culture_and_heritage/NartingbigI.png" alt="">
+    </div>
+    <div class="culture_and_heritage_body">
+        <div class="Mawphlang_lawkyntang_cont">
+            <img src="images/culture_and_heritage/nartiangmegalithmap.png" alt="">
+            <div class="Mawphlang_lawkyntang_contents">
+                <h1>NARTIANG DURGA TEMPLE</h1>
+                <p>The Nartiang Durga Temple stands as a testament to Meghalaya's rich cultural heritage. Located in the
+                    quaint village of Nartiang, this ancient temple is dedicated to Goddess Durga, revered by locals and
+                    visitors alike. Constructed with traditional architecture and adorned with intricate carvings, the
+                    temple offers a glimpse into the region's religious significance and architectural prowess. As one
+                    of the oldest temples in the state, Nartiang Durga Temple continues to be a place of worship and
+                    pilgrimage, drawing devotees seeking blessings and spiritual solace amidst its serene surroundings.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="lawkyntangbigI">
+        <img src="images/culture_and_heritage/nartiangdurgatemp.png" alt="">
+    </div>
+    <footer class="footer">
+        <div class="footer-columns">
+            <!-- Column 1: Image with text below -->
+            <div class="footer-column">
+                <img src="images/logo/Duia-Logo-png 2.png" alt="Image" class="footer-image">
+                <p class="footer-image-text">© Duia Trailblazers 2024</p>
+                <p>Website Design & Developed By <a href="">Denise</a>  & <a href=""> Dabiang</a></p>
+            </div>
+    
+            <!-- Column 2: List items -->
+            <div class="footer-column">
+                <ul>
+                    <li><a href="AboutUs.html">ABOUT US</a></li> &nbsp;
+                    <li><a href="">TEAM MEMBERS</a></li>&nbsp;
+                    <li><a href="">PRIVACY POLICY</a></li>&nbsp;
+                </ul>
+            </div>
+    
+            <!-- Column 3: Heading and paragraph -->
+            <div class="footer-column3">
+                <h3>OFFICE</h3>
+                <p>Prime Startup Hub, JN Stadium, Polo <br>
+                    Shillong – 793001 <br>
+                    Meghalaya</p>
+            </div>
+    
+            <!-- Column 4: Social media follow us -->
+            <div class="footer-column4 social-media">
+                <span>CONNECT</span> <br> <br>
+                <span>Contact</span> <br><br>
+                <a href="https://www.facebook.com/duiatrailblazers/"><i class="fab fa-facebook"></i></a> &nbsp;
+                <a href="https://www.youtube.com/@duiatrailblazers3564"><i class="fab fa-youtube"></i></a>&nbsp;
+                <a href="https://www.instagram.com/duiatrailblazers/"><i class="fab fa-instagram"></i></a>&nbsp;
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
