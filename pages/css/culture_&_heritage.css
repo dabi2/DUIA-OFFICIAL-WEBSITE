@@ -1,24 +1,48 @@
 .culture_and_heritage {
-    background-image: url("culture_and_heritage/mainbg.jpg"); /* Set your background image URL */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the background image */
-    padding: 20px; /* Add some padding to the container if needed */
-    width: auto;
-  }
-  .Mawphlang_lawkyntang_cont{
-    padding: 100px;
-    /* border: solid; */
-    display: flex;
-    gap: 50px;
-    /* margin: 50px; */
-  }
-  .Mawphlang_lawkyntang_cont img{
-    border: solid;
-    /* width: 100%; */
-  }
-  .Mawphlang_lawkyntang_contents{
-  }
-  .Mawphlang_lawkyntang_contents h1{
+  background-image: url("culture_and_heritage/mainbg.jpg");
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  /* padding: 20px; */
+  width: 100%;
+}
+.culture_para {
+  border: solid;
+  text-align: center;
+}
+.culture_para p {
+  border: solid;
+  padding: 50px;
+  margin-top: 400px;
+  /* margin-bottom: 400px; */
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+.mawphlang_lawkyntang_body {
+  border: solid;
+  gap: 20px;
+  display: flex;
+  padding: 100px;
+}
+.mawphlang_lawkyntang_text h1 {
+  font-family: "Asap", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 4.5px;
+  font-variation-settings: "wdth" 100;
+}
+.mawphlang_lawkyntang_text p {
+  text-align: justify;
+}
+.main_img img {
+  padding: 50px;
+  width: 100%;
+}
+
+/* .Mawphlang_lawkyntang_contents{
+  } */
+/* .Mawphlang_lawkyntang_contents h1{
     font-family: "Asap", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
@@ -26,15 +50,12 @@
     letter-spacing: 4.5px;
     font-variation-settings:
       "wdth" 100;
-  }
-  .Mawphlang_lawkyntang_contents p{
-    /* border: solid; */
+  } */
+/* .Mawphlang_lawkyntang_contents p{
+    text-align: justify;
     line-height: 35px;
-  }
-  .lawkyntangbigI img{
-    width: 100%;
-  }
-  .lawkyntangbigI{
-    /* border: solid; */
+  } */
+
+/* .lawkyntangbigI{
     padding: 100px;
-  }
+  } */

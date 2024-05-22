@@ -7,17 +7,27 @@ body {
   font-variation-settings: "slnt" 0;
 }
 .eco_rural_navbar_container {
-  background-image: url("Ecorural_background/mainbg.jpg"); /* Set your background image URL */
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the background image */
-  padding: 20px; /* Add some padding to the container if needed */
-  width: auto;
+  background-image: url("Ecorural_background/mainbg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  /* width: 100%; */
+  height: 100%;
+}
+.eco_para{
+  justify-content: center;
+  color: white;
+}
+.eco_para p{
+  margin-top: 150px;
+  text-align: center;
+  /* margin-top: 150px; */
+  color: white;
 }
 .eco_rural_text_container {
   margin-top: 300px;
 }
 .eco_rural_text_container p {
-  /* border: solid; */
   text-align: center;
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -29,10 +39,30 @@ body {
 }
 /* parent div */
 .kynthong_village{
-    display: flex;
-    border: solid;
-    padding: 50px;
-    gap: 50px;
+  gap: 20px;
+border: solid;
+display: flex;
+padding: 50px;
+justify-content: center;
+
+}
+.kynthong_map{
+  border: solid;
+}
+.kynthong_heading{
+  border: solid;
+}
+.kynthong_heading h2{
+  border: solid;
+}
+.kynthong_heading p{
+  text-align: justify;
+  border: solid;
+}
+
+.kynthong_img_container{
+  width: fit-content;
+  border: solid;
 }
 .img_container_ecorural_tour{
     border: solid;
@@ -48,24 +78,21 @@ body {
     text-align: center;
 }
 .align_straight{
+  gap: 50px;
+  color: red;
   border: solid;
-
+  padding: 50px;
   justify-content: center;
-  padding: 80px;
 }
-.living_root_bridges{
-  /* border: solid; */
-}
+
 .living_root_bridges p{
-  width: 100%;
+  width: fit-content;
+  border: solid;
+  text-align: justify;
 }
-/* .living_root_bridges h1{
-  font-family: as;
-  font-weight: bold;
-  font-size: 40px;
-  letter-spacing: 10px;
-} */
 .living_root_bridges h1{
+  border: solid;
+  width: fit-content;
   font-family: "Asap", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -75,20 +102,22 @@ body {
     "wdth" 100;
 }
 .syntein_img_container{
-  text-align: center;
+  /* justify-content: center; */
+  padding: 50px;
 
 }
 .syntein_img_container img{
-  text-align: center;
+  /* text-align: center; */
+  width: 100%;
   
 }
 .double_decker_living_root_bridges{
+  border: solid;
   margin-top: 60px;
   justify-content: center;
   
 }
 .double_decker_living_root_bridges h2{
-  margin-top: 60px;
   justify-content: center;
   font-family: "Asap", sans-serif;
   font-optical-sizing: auto;
@@ -97,7 +126,6 @@ body {
   letter-spacing: 4.5px;
   font-variation-settings:
     "wdth" 100;
-  
 }
 /* .assistant-<uniquifier> {
   font-family: "Assistant", sans-serif;
@@ -106,7 +134,10 @@ body {
   font-style: normal;
 } */
 .double_decker_living_root_bridges p{
-  width: 185vh;
+  border: solid;
+  width: fit-content;
+  text-align: justify;
+  /* width: 182vh; */
   line-height: 35px;
   /* font-family: "Assistant", sans-serif;
   font-optical-sizing: auto;
@@ -115,12 +146,16 @@ body {
 
 }
 .double_decker_living_root_bridges img{
+  width: 100%;
   margin-top: 25px;
-  /* margin-left: 50px; */
   text-align: center;
-  justify-content: center;
+}
+.triple_decker_living_root_bridges{
+margin-top: 60px;
+
 }
 .triple_decker_living_root_bridges h2{
+  border: solid;
   font-family: "Asap", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -128,15 +163,17 @@ body {
   letter-spacing: 4.5px;
   font-variation-settings:
     "wdth" 100;
-
 }
 .triple_decker_living_root_bridges P{
-  width: 185vh;
+  text-align: justify;
   line-height: 35px;
   
 }
+.triple_decker_living_root_bridges img{
+  width: 100%;
+}
 .world_longest_living_root{
-  margin-top: 70px;
+  margin-top: 60px;
 }
 .world_longest_living_root h2{
   font-family: "Asap", sans-serif;
@@ -148,8 +185,11 @@ body {
     "wdth" 100;
 }
 .world_longest_living_root p{
-  width: 185vh;
+  text-align: justify;
   line-height: 35px;
+}
+.world_longest_living_root img{
+  width: 100%;
 }
 
 

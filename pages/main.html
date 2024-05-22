@@ -2,29 +2,291 @@
 <html lang="en">
 
 <head>
+    <!-- sumana fonts-->
     <style>
-        #escape_the_ordinary{
-            /* border: solid; */
-            color: white;
-            text-align: center;
-        }
-        .navbar-nav {
-            margin: 0 auto;
+        @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Assistant:wght@200..800&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sumana:wght@400;700&display=swap');
+    </style>
+    <!-- sumana fonts-->
+    <!-- <style>
+
+        .navbar {
+            height: fit-content;
+            position: fixed;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .navbar .logo img {
+            width: 100px;
+        }
+
+        .nav-links {
+            height: fit-content;
+            list-style: none;
+            display: flex;
+            gap: 5em;
             justify-content: center;
+            align-items: center;
+            flex: 1;
+            margin: 0;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links img {
+            position: relative;
+            width: 60px;
+        }
+
+        .nav-links a {
+            color: black;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: aquamarine;
+            transition: width 0.5s ease;
+        }
+
+        .nav-links a:hover::after {
             width: 100%;
         }
 
-        .background_of_main_body {
-            background-image: url("images/mainLanding.png");
-            /* Set your background image URL */
-            background-size: cover;
-            /* Cover the entire container */
-            background-position: center;
-            /* Center the background image */
-            padding: 20px;
-            height: 50vh;
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
         }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+        }
+
+        .nav-links-mobile {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #333;
+        }
+
+        .nav-links-mobile.active {
+            display: flex;
+        }
+
+        .nav-links-mobile li {
+            text-align: center;
+            padding: 1em;
+        }
+
+        #mobile-logo {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .logo {
+                order: -1;
+            }
+        }
+    </style> -->
+    <style>
+        .navbar {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed; /* Ensures the navbar stays fixed at the top */
+    z-index: 1000; /* Keeps the navbar on top of other elements */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Ensures the navbar has a background */
+    padding: 10px 20px; /* Adds some padding for better appearance */
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 0;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links img {
+    width: 60px;
+}
+
+.nav-links a {
+    color: black;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: aquamarine;
+    transition: width 0.5s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    font-size: 10px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+.nav-links-mobile {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+}
+
+.nav-links-mobile.active {
+    display: flex;
+}
+
+.nav-links-mobile li {
+    text-align: center;
+    padding: 1em;
+}
+
+#mobile-logo {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo {
+        order: -1;
+    }
+}
+
     </style>
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -60,17 +322,6 @@
             setInterval(slideNext, 2000);
         });
     </script>
-    <!-- hamburgur -->
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu-list");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -105,252 +356,252 @@
             <!-- Add more social media icons as needed -->
         </ul>
     </div>
-    <div class="background_of_main_body">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 centered-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <a class="navbar-brand" href="#"><img src="images/logo/Duia-Logo-png 1.png" alt=""></a>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo/Duia-Logo-png 1.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="main.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#destination" class="dropbtn">DESTINATION</a>
+                <div class="dropdown-content">
+                    <a href="destination.html">EAST KHASI HILLS</a>
+                    <a href="destination.html">WEST JAINTIA HILLS</a>
+                    <a href="destination.html">EAST JAINTIA HILLS</a>
+                    <a href="destination.html">EAST GARO HILLS</a>
+                    <a href="destination.html">NORTH GARO HILLS</a>
+                    <a href="destination.html">SOUTH GARO HILLS</a>
+                    <a href="destination.html">WEST GARO HILLS</a>
+                    <a href="destination.html">SOUTH GARO HILLS</a>
                 </div>
+            </li>
+            <img src="images/logo/Duia-Logo-png 1.png" alt="">
+            <li><a href="adventure_tour.html">TOUR</a></li>
+            <li><a href="AboutUs.html">CONTACT US</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <ul class="nav-links-mobile">
+        <li><a href="main.html">Home</a></li>
+        <li class="dropdown">
+            <a href="#destination" class="dropbtn">Destination</a>
+            <div class="dropdown-content">
+                <a href="#place1">EAST KHASI HILLS</a>
+                    <a href="destination.html">WEST JAINTIA HILLS</a>
+                    <a href="destination.html">EAST JAINTIA HILLS</a>
+                    <a href="destination.html">EAST GARO HILLS</a>
+                    <a href="destination.html">NORTH GARO HILLS</a>
+                    <a href="destination.html">SOUTH GARO HILLS</a>
+                    <a href="destination.html">WEST GARO HILLS</a>
+                    <a href="destination.html">SOUTH GARO HILLS</a>
             </div>
-        </nav>
-        <h1 id="escape_the_ordinary">ESCAPE <br> THE <br>ORDINARY</h1>
+        </li>
+        <img id="mobile-logo" src="images/logo/Duia-Logo-png 1.png" alt="">
+        <li><a href="adventure_tour.html">Tour</a></li>
+        <li><a href="AboutUs.html">Contact Us</a></li>
+    </ul>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links-mobile').classList.toggle('active');
+        });
+    </script>
+    <div class="main_bg">
+        <h1>Explore The <br> <i>Ordinary</i> </h1>
         <div class="form_booking_container">
-            <form action="" method="post">
-                <select name="travel_type" required>
+            <form id="tourForm">
+                <select name="location" required>
                     <option value="" disabled selected>Where?</option>
-                    <option value="Nong_krem">LIVING ROOT BRIDGE</option>
-                    <option value="Nong_krem">SOHRA</option>
-                    <option value="Nong_krem">LAITLUM</option>
-                    <option value="Nong_krem">NONG KREM</option>
+                    <option value="Living_Root_Bridge">Living Root Bridge</option>
+                    <option value="Sohra">Sohra</option>
+                    <option value="Laitlum">Laitlum</option>
+                    <option value="Nong_Krem">Nong Krem</option>
+                    <!-- Add more locations as needed -->
                 </select>
+
+                <!-- Date input field -->
                 <input type="date" name="date" required>
+
+                <!-- Travel type dropdown -->
                 <select name="travel_type" required>
                     <option value="" disabled selected>Select travel type</option>
                     <option value="Leisure">Leisure</option>
                     <option value="Adventure">Adventure</option>
                     <option value="Business">Business</option>
                     <option value="Family">Family</option>
+                    <!-- Add more travel types as needed -->
                 </select>
+
+                <!-- Submit button -->
                 <button type="submit">Find Your Tour</button>
             </form>
+
+            <!-- Recommended places will be displayed here -->
+            <div id="recommendedPlaces">
+            </div>
         </div>
+
+        <script>
+            document.getElementById("tourForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form data
+                const formData = new FormData(this);
+                const location = formData.get("location");
+                const date = formData.get("date");
+                const travelType = formData.get("travel_type");
+
+                // Dummy logic to generate recommended places (replace with actual logic)
+                let recommendedPlaces = [];
+
+                if (travelType === "Leisure") {
+                    recommendedPlaces.push("Shillong Peak");
+                    recommendedPlaces.push("Elephant Falls");
+                } else if (travelType === "Adventure") {
+                    recommendedPlaces.push("Cherrapunji");
+                    recommendedPlaces.push("Mawlynnong");
+                    recommendedPlaces.push("dabiang");
+                } else if (travelType === "Business") {
+                    recommendedPlaces.push("Shillong Golf Course");
+                    recommendedPlaces.push("Don Bosco Centre for Indigenous Cultures");
+                } else if (travelType === "Family") {
+                    recommendedPlaces.push("Ward's Lake");
+                    recommendedPlaces.push("Police Bazaar");
+                }
+                // Display recommended places
+                const recommendedPlacesDiv = document.getElementById("recommendedPlaces");
+                recommendedPlacesDiv.innerHTML = "<h3>Recommended Places:</h3>";
+                recommendedPlaces.forEach(place => {
+                    recommendedPlacesDiv.innerHTML += "<p>" + place + "</p>";
+                });
+            });
+        </script>
     </div>
-   
-
-    <!-- body section -->
-
-    <!-- <div class="navbar-container">
-            <div class="navbar">
-                
-                <nav>
-                    <div class="logo">
-                        <div class="moro">
-                            <img src="images/logo/Duia-Logo-png 2.png" alt="">
-                        </div>
-                    </div>
-                    <div class="menu-toggle" onclick="toggleMenu()">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    
-                    <ul class="menu">
-                        <li><a href="#">HOME</a></li>
-                        <li><a href="#">DESTINATION</a></li>
-                        <li><a href="main.html"><img
-                                    src="https://duiatrailblazers.com/wp-content/uploads/2023/06/Duia-Logo-png.png"
-                                    alt=""></a>
-                        </li>
-                        <li><a href="#">TOURS</a></li>
-                        <li><a href="#">CONTACT</a></li>
-                    </ul>
-                    <div class="list_of_items">
-                        <ul id="menu-list">
-                            <li><a href="">HOME</a></li> &nbsp;
-                            <li><a href="">DESTINATION</a></li> &nbsp;
-                            <li><a href="">TOURS</a></li> &nbsp;
-                            <li><a href="">CONTACT </a></li> &nbsp;
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            <div class="text_container">
-                <h1>Escape The <br> Ordinary</h1>
-            </div>
-            <div class="form_booking_container">
-                <form action="" method="post">
-                    <select name="travel_type" required>
-                        <option value="" disabled selected>Where?</option>
-                        <option value="Nong_krem">LIVING ROOT BRIDGE</option>
-                        <option value="Nong_krem">SOHRA</option>
-                        <option value="Nong_krem">LAITLUM</option>
-                        <option value="Nong_krem">NONG KREM</option>
-                    </select>
-                    <input type="date" name="date" required>
-                    <select name="travel_type" required>
-                        <option value="" disabled selected>Select travel type</option>
-                        <option value="Leisure">Leisure</option>
-                        <option value="Adventure">Adventure</option>
-                        <option value="Business">Business</option>
-                        <option value="Family">Family</option>
-                    </select>
-                    <button type="submit">Find Your Tour</button>
-                </form>
-            </div>
-        </div> -->
     <div class="trees_image">
         <img src="images/final_img/Group 41103.png" alt="">
     </div>
-    <div class="body_section">
-        <div class="tours_and_travels display">
-            <h1>TOURS & TRAVELS</h1>
-            <h1>Presenting The True Meghalayan Experience</h1>
-        </div>
-        &nbsp;
-        <div class="container1">
-            <div class="container_text">
-                <h2>Go Beyond Your <br> Imagination hello</h2>
-                <hr>
-                <h4>Discover Your Ideal Experience With Us!</h4>
-            </div>
-            <div class="gallery_container">
-                <div class="imgc1">
-                    <img src="images/container/container1.png" alt="">
-                    <div class="bottom_text_test">
-                        <h2>ECO RURAL TOUR</h2>
-                        <a href="ecorural_tour.html">Explore Here</a>
-                    </div>
-                    <!-- <div class="imgtext1">
-                        <h3>ECO RURAL TOURS</h3>
-                        <a href="ecorural_tour.html">EXPLORE MORE</a>
-                    </div> -->
-                    <div class="imgtextmobile">
-                        <h3>ECO RURAL TOURS</h3>
-                        <a href="ecorural_tour.html">EXPLORE MORE</a>
-                    </div>
-                </div>
-                <div class="imgc1">
-                    <img src="images/container/container2.png" alt="">
-                    <div class="bottom_text_test">
-                        <h2>CULTURE & HERITAGE TOURS</h2>
-                        <a href="cultureandHeritage.html">Explore Here</a>
-                    </div>
-                    <!-- <div class="imgtext2">
-                        <h3>CULTURE & HERITAGE TOURS</h3>
-                        <a href="cultureandHeritage.html">EXPLORE MORE</a>
-                    </div> -->
-                    <div class="imgtextmobile">
-                        <h3>CULTURE & HERITAGE TOURS</h3>
-                        <a href="cultureandHeritage.html">EXPLORE MORE</a>
-                    </div>
-                </div>
-                <div class="imgc1">
-                    <img src="images/container/container3.png" alt="">
-                    <div class="bottom_text_test">
-                        <h2>ADVENTURE TOURS</h2>
-                        <a href="adventure_tour.html">Explore Here</a>
-                    </div>
+    <div class="space_between_trees">
 
-                    <!-- <div class="imgtext3">
-                        <h3>ADVENTURE TOURS</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div> -->
-                    <div class="imgtextmobile">
-                        <h3>ADVENTURE TOURS</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div>
+    </div>
+    <div class="container1">
+        <div class="container_text">
+            <h2>Go Beyond Your <br> Imagination hello</h2>
+            <hr>
+            <h4>Discover Your Ideal Experience With Us!</h4>
+        </div>
+        <div class="gallery_container">
+            <div class="imgc1">
+                <img src="images/container/container1.png" alt="">
+                <div class="bottom_text_test">
+                    <h2>ECO RURAL TOUR</h2>
+                    <a href="ecorural_tour.html">Explore Here</a>
+                </div>
+                <!-- <div class="imgtext1">
+                    <h3>ECO RURAL TOURS</h3>
+                    <a href="ecorural_tour.html">EXPLORE MORE</a>
+                </div> -->
+                <div class="imgtextmobile">
+                    <h3>ECO RURAL TOURS</h3>
+                    <a href="ecorural_tour.html">EXPLORE MORE</a>
                 </div>
             </div>
-        </div>
-        <div class="tours_and_travels">
-            <h1>DUIA TRAILBLAZERS ADVENTURE TRAINING ACADEMY</h1>
-            <p>EMBARK ON ADVENTURE SPORTS LEARNING WITH US!</p>
-        </div>
-        <!-- 2nd container-->
-        <div class="container1">
-            <div class="container_text">
-                <h2>Go Beyond Your <br> Imagination hello</h2>
-                <hr>
-                <h4>Discover Your Ideal Experience With Us!</h4>
-            </div>
-            <div class="gallery_container">
-                <div class="imgc1">
-                    <img src="images/container/tourguide.png" alt="">
-                    <div class="bottom_text_test">
-                        <h2>TOUR GUIDE</h2>
-                        <a href="">Explore Here</a>
-                    </div>
-                    <!-- <div class="imgtext11">
-                        <h3>ECO RURAL TOURS</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div> -->
-                    <div class="imgtextmobile1">
-                        <h3>TOUR GUIDE</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div>
+            <div class="imgc1">
+                <img src="images/container/container2.png" alt="">
+                <div class="bottom_text_test">
+                    <h2>CULTURE & HERITAGE TOURS</h2>
+                    <a href="cultureandHeritage.html">Explore Here</a>
                 </div>
-                <div class="imgc1">
-                    <img src="images/container/tourguide1.png" alt="">
-                    <div class="bottom_text_test">
-                        <h2>CANYONING</h2>
-                        <a href="">Explore Here</a>
-                    </div>
-                    <!-- <div class="imgtext22">
-                        <h3>CULTURE & HERITAGE TOURS</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div> -->
-                    <div class="imgtextmobile1">
-                        <h3>CANYONING</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div>
-                </div>
-                <div class="imgc1">
-                    <img src="images/container/tourguide2.png" alt="">
-                    <div class="bottom_text_test">
-                        <h2>CAVING</h2>
-                        <a href="">Explore Here</a>
-                    </div>
-                    <!-- <div class="imgtext33">
-                        <h3>ADVENTURE TOURS</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div> -->
-                    <div class="imgtextmobile1">
-                        <h3>CAVING</h3>
-                        <a href="">EXPLORE MORE</a>
-                    </div>
+                <!-- <div class="imgtext2">
+                    <h3>CULTURE & HERITAGE TOURS</h3>
+                    <a href="cultureandHeritage.html">EXPLORE MORE</a>
+                </div> -->
+                <div class="imgtextmobile">
+                    <h3>CULTURE & HERITAGE TOURS</h3>
+                    <a href="cultureandHeritage.html">EXPLORE MORE</a>
                 </div>
             </div>
-        </div>
-        <!-- 2nd container-->
+            <div class="imgc1">
+                <img src="images/container/container3.png" alt="">
+                <div class="bottom_text_test">
+                    <h2>ADVENTURE TOURS</h2>
+                    <a href="adventure_tour.html">Explore Here</a>
+                </div>
 
+                <!-- <div class="imgtext3">
+                    <h3>ADVENTURE TOURS</h3>
+                    <a href="">EXPLORE MORE</a>
+                </div> -->
+                <div class="imgtextmobile">
+                    <h3>ADVENTURE TOURS</h3>
+                    <a href="">EXPLORE MORE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tours_and_travels">
+        <h1>DUIA TRAILBLAZERS ADVENTURE TRAINING ACADEMY</h1>
+        <p>EMBARK ON ADVENTURE SPORTS LEARNING WITH US!</p>
+    </div>
+    <div class="container1">
+        <div class="container_text">
+            <h2>Go Beyond Your <br> Imagination hello</h2>
+            <hr>
+            <h4>Discover Your Ideal Experience With Us!</h4>
+        </div>
+        <div class="gallery_container">
+            <div class="imgc1">
+                <img src="images/container/container1.png" alt="">
+                <div class="bottom_text_test">
+                    <h2>ECO RURAL TOUR</h2>
+                    <a href="ecorural_tour.html">Explore Here</a>
+                </div>
+                <!-- <div class="imgtext1">
+                    <h3>ECO RURAL TOURS</h3>
+                    <a href="ecorural_tour.html">EXPLORE MORE</a>
+                </div> -->
+                <div class="imgtextmobile">
+                    <h3>ECO RURAL TOURS</h3>
+                    <a href="ecorural_tour.html">EXPLORE MORE</a>
+                </div>
+            </div>
+            <div class="imgc1">
+                <img src="images/container/container2.png" alt="">
+                <div class="bottom_text_test">
+                    <h2>CULTURE & HERITAGE TOURS</h2>
+                    <a href="cultureandHeritage.html">Explore Here</a>
+                </div>
+                <!-- <div class="imgtext2">
+                    <h3>CULTURE & HERITAGE TOURS</h3>
+                    <a href="cultureandHeritage.html">EXPLORE MORE</a>
+                </div> -->
+                <div class="imgtextmobile">
+                    <h3>CULTURE & HERITAGE TOURS</h3>
+                    <a href="cultureandHeritage.html">EXPLORE MORE</a>
+                </div>
+            </div>
+            <div class="imgc1">
+                <img src="images/container/container3.png" alt="">
+                <div class="bottom_text_test">
+                    <h2>ADVENTURE TOURS</h2>
+                    <a href="adventure_tour.html">Explore Here</a>
+                </div>
+
+                <!-- <div class="imgtext3">
+                    <h3>ADVENTURE TOURS</h3>
+                    <a href="">EXPLORE MORE</a>
+                </div> -->
+                <div class="imgtextmobile">
+                    <h3>ADVENTURE TOURS</h3>
+                    <a href="">EXPLORE MORE</a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="carousel">
         <div class="carousel_inner">
@@ -372,20 +623,18 @@
             <img src="images/affiliate_companies/TGAM LOGO ONLY.png" alt="Company Logo">
         </div>
     </div>
-
     <div class="Coming_soon">
         <h1>COMING SOON</h1>
         <h3>Northeast India Adventure & Travel Magazine</h3>
-
     </div>
     <div class="clouds">
         <img src="images/final_img/clouds.png" alt="Faild to load image please refresh your page">
     </div>
     <div class="testtimonials">
-        <img src="images/testimonials/testi1.png" alt="">
-        <img src="images/testimonials/testi1.png" alt="">
-        <img src="images/testimonials/testi1.png" alt="">
-        <img src="images/testimonials/testi1.png" alt="">
+        <img src="images/testimonials/Group 41138.png" alt="">
+        <img src="images/testimonials/Group 41139.png" alt="">
+        <img src="images/testimonials/Group 41140.png" alt="">
+        <img src="images/testimonials/Group 41141.png" alt="">
     </div>
     <!-- body section -->
     &nbsp;
@@ -425,6 +674,7 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>

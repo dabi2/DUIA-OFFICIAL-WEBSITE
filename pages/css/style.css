@@ -1,76 +1,57 @@
 body {
   margin: 0px;
-  font-family: "Inter", sans-serif;
+  /* font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  font-variation-settings: "slnt" 0;
+  font-variation-settings: "slnt" 0; */
 }
-/* .body_section{
-  border: solid;
-  color: red;
-} */
 /* navbar background image */
-.navbar-container {
-  background-image: url("mainLanding.png"); /* Set your background image URL */
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the background image */
+
+.main_bg {
+  background-image: url("mainLanding.png");
+  background-size: cover; 
+  /* background-position: center; */
+  background-repeat: no-repeat;
   padding: 20px;
-  height: 50vh;
-}
-.navi{
-  border: solid;
-}
-/* .navbar{
+  /* width: 100%; */
+  /* height: ; */
   justify-content: center;
+  justify-content: center;
+}
+.main_bg h1{
+  padding: 100px;
+  font-family: "Sumana", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size:  50px;
+  text-align: center;
+}
+.main_bg i{
+  font-family: "Sumana", serif;
+  font-weight: 700;
+  font-style: italic;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
 
-} */
-/* nav {
+.heading_text{
+  justify-content: center;
+}
+.heading_text h1 {
+  text-align: center;
+}
+.heading_text p {
+  color: red;
+  text-align: center;
+}
+.space_between_trees{
+  height: 150px;
+}
+.containerone{
   border: solid;
-} */
-
-.menu {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  /* display: none; */
-}
-
-.menu li {
-  display: inline-block;
-  text-align: center;
-  margin-right: 20px; /* Adjust margin as needed */
-}
-
-.menu li:last-child {
-  margin-right: 0;
-}
-#menu-list{
-  display: none;
-}
-.menu li a {
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-  color: white; 
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.menu li a:hover {
-  background-color: #f0f0f0;
-}
-
-.menu-toggle {
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  z-index: 1000;
-}
-nav ul li img{
-  height: 100px;
-  width: 100px;
+  justify-content: center;
 }
 /* text_container */
 .text_container {
@@ -78,19 +59,15 @@ nav ul li img{
   color: white;
 }
 .text_container h1 {
-  /* font-size: 100px; */
-  /* margin-top: 200px; */
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-style: normal;
-  /* color: white; */
 }
 /* text_container */
 
 /* form_booking_container */
 .form_booking_container {
-  /* background-color: #161616; */
   align-items: center;
   text-align: center;
 }
@@ -182,8 +159,6 @@ button:hover {
 /* Style for the image */
 .trees_image img {
   width: 100%;
-  /* height: auto; */
-  /* height: 200px;  */
 }
 /* trees_image */
 /* tours_and_travels */
@@ -200,9 +175,7 @@ button:hover {
   text-align: center;
 }
 .tours_and_travels {
-  margin-top: 100px;
-  padding: 10px;
-  margin: 90px;
+  margin: 50px;
 }
 .container_text{
   margin-top: 50px;
@@ -216,7 +189,6 @@ button:hover {
   height: 2px;
   background-color: #333;
   border: none;
-  /* margin: 20px 0; */
   opacity: 0.8;
 }
 
@@ -236,11 +208,7 @@ button:hover {
   width: fit-content;
 }
 .bottom_text_test{
-  /* border: solid; */
-  /* margin: 10px; */
-  /* left: 10px; */
   color: white;
-  /* text-align: justify; */
   position: absolute;
   bottom: 50px;
   font-weight: bold;
@@ -248,20 +216,16 @@ button:hover {
 .bottom_text_test a{
   text-decoration: none;
   text-align: justify;
-  /* position: absolute; */
-  /* bottom: 1px;
-  right: 16px; */
+  right: 16px; 
   color: white;
 }
 .bottom_text_test h2{
   font-size: 20px;
-  /* color: rgb(255, 0, 0); */
 }
 
 .container2{
   margin-left: 20px;
   margin-right: 20px;
-  /* border: solid; */
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -270,112 +234,8 @@ button:hover {
 .container_text2{
   margin-top: 50px;
   height: fit-content;
-  /* border: solid; */
   margin-right: 50px;
   margin-left: 50px;
-}
-
-.news_blog {
-  margin-top: 50px;
-  text-align: center;
-}
-.news_blog h3 {
-  font-size: 25px;
-}
-.news_blog h1 {
-  /* color: #9c0000; */
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.news_blog hr {
-  margin: 0 auto;
-  width: 15%; /* Adjust the width as needed */
-  height: 2px;
-  background-color: #333;
-  border: none;
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-/* news_blog */
-/* container_course */
-.Discover_learn_overcome h4 {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  /* margin-left:60px ; */
-  /* flex: 1; */
-  text-align: left; /* Align the text to the left */
-}
-.Discover_learn_overcome {
-  /* border: solid; */
-  margin-left: 150px;
-  /* width: auto; */
-  /* flex: 1; */
-  text-align: left; /* Align the text to the left */
-}
-.Discover_gallery {
-  /* margin-left: 100%; */
-  padding: 20px;
-  display: flex; /* Use flexbox to create a two-column layout */
-  justify-content: space-between; /* Distribute space between the text and images */
-  align-items: center; /* Vertically align items in the center */
-}
-.Discover_gallery hr {
-  /* margin-right: 50vh; */
-  width: 100%;
-  height: 2px; /* Set the height of the line */
-  background-color: #333; /* Set the background color */
-  border: none; /* Remove default border */
-  margin: 20px 0; /* Add margin for spacing */
-  opacity: 0.8;
-  /* margin-left: 60px; */
-}
-.Discover_gallery_images {
-  margin-left: 50px;
-  margin-right: 60px;
-  /* border: solid; */
-  position: relative;
-  display: flex; /* Use flexbox to layout the images */
-  gap: 10px; /* Add space between images */
-  flex: 2; /* Allow this element to take up 2 portions of the container */
-}
-.Discover_image_container {
-  position: relative; /* Position the container relative to its contents */
-  display: inline-block; /* Treat each container as an inline block */
-}
-.Discover_image_container img {
-  width: 100%; /* Adjust the width as needed */
-  height: 400px; /* Maintain aspect ratio */
-  display: block; /* Ensure the image is displayed as a block */
-  border-radius: 5px;
-}
-.Discover_image_text {
-  position: absolute; /* Position the text absolutely within the container */
-  bottom: 50px; /* Position the text 10px from the bottom */
-  right: 10px; /* Position the text 10px from the right */
-  color: white; /* Set the text color to white for better contrast */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
-  padding: 5px; /* Add padding around the text */
-  border-radius: 5px; /* Optional: Rounded corners for the text background */
-  font-size: 25px; /* Adjust the font size as needed */
-  font-family: sans-serif; /* Specify the font family */
-}
-.Discover_image_text_title {
-  position: absolute; /* Position the text absolutely within the container */
-  bottom: 10px; /* Position the text 10px from the bottom */
-  right: 10px; /* Position the text 10px from the right */
-  color: white; /* Set the text color to white for better contrast */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background color */
-  padding: 5px; /* Add padding around the text */
-  border-radius: 5px; /* Optional: Rounded corners for the text background */
-  font-size: 14px; /* Adjust the font size as needed */
-  font-family: sans-serif; /* Specify the font family */
-}
-.Discovery_gallery img {
-  max-width: 300px; /* Allow images to adjust their width based on available space */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Optional: Rounded corners for images */
 }
 /* container_course */
 
@@ -420,13 +280,9 @@ button:hover {
 /* clouds */
 .clouds img {
   align-content: center;
-  /* margin-left: 50px; */
   width: 100%;
-  /* border: solid; */
 }
-.clouds {
-  /* border: solid; */
-}
+
 /* clouds */
 /* testtimonials */
 .testtimonials {
@@ -435,7 +291,6 @@ button:hover {
 .testtimonials img {
   display: inline-block;
   margin: 0 20px;
-  /* aye lyrics */
 }
 /* testtimonials */
 /* footer */
@@ -494,15 +349,12 @@ button:hover {
 /* Text below image */
 .footer-image-text {
   font-size: 20px;
-  /* font-family: ; */
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: bold; */
   font-style: normal;
   font-variation-settings: "slnt" 0;
   color: white;
   font-size: 14px;
-  /* text-align: center; */
 }
 
 /* Social media links */
@@ -513,14 +365,11 @@ button:hover {
 
 .social-media a {
   color: white;
-  /* margin-left: 10px; */
 }
 .social-media i {
   color: red;
-  /* border: solid; */
   height: 50px;
   width: 50px;
-  /* margin-left: 10px; */
 }
 
 .footer-column3 {

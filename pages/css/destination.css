@@ -1,0 +1,40 @@
+.variation_parent_content {
+  margin: 50px;
+}
+.East_khasi_hills_2 {
+  display: flex;
+}
+#variation_h1 {
+  margin-bottom: 50px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.variation_child_content {
+  margin: 50px;
+}
+li {
+  list-style-type: none;
+}
+.spcng {
+  margin: 50px;
+}
+.imgftr {
+  justify-content: center;
+  text-align: center;
+  color: black;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+.imgftr h2 {
+  text-align: center;
+  width: 100%;
+}
+.imgftr img {
+}

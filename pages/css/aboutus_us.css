@@ -1,44 +1,128 @@
-body{
+body {
   background-color: turquoise;
 }
-.culture_and_heritage {
-    /* background-image: url("culture_and_heritage/mainbg.jpg"); */
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    width: auto;
-  }
-  .about_heading{
-    padding: 25px;
-    text-align: center;
-  }
-  .Duia_founder_paragraph{
-    justify-content: center;
-    text-align: center;
-    line-height: 35px;
-    font-size: 16px;
-  }
-  .get_in_touch{
-    text-align: center;
-  }
-  .office_location_parent{
-    justify-content: center;
-    display: flex;
-  }
-  .office_location{
-    gap: 100px;
-    display: flex;
-    align-items: center;
-  }
-  .founder_main{
-    justify-content: center;
-    text-align: center;
-  }
-  .team_members_parent{
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-  }
-  .team_members_child{
-    text-align: center;
-  }
+html {
+  scroll-behavior: smooth;
+}
+.about_heading {
+  margin: 50px;
+  text-align: center;
+}
+.about_heading {
+  position: relative;
+  margin: 50px;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+}
+
+
+.founder_main {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.founder_main img {
+
+  transition: box-shadow 0.5s ease; /* Smooth transition for the shadow */
+}
+
+.founder_main::before {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  left: 0;
+  width: 100%;
+  height: 0; /* Initially no height */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)); /* Gradient background */
+  transition: height 0.5s ease; /* Smooth transition for height */
+  z-index: 1; /* Ensure the background overlay is above the image but below the text */
+  pointer-events: none; /* Ensure the overlay does not interfere with hover events */
+}
+
+.founder_main h3, .founder_main p {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for text */
+  margin: 0;
+  padding: 0;
+  z-index: 2; /* Ensure the text is above the dark background overlay */
+}
+
+.founder_main:hover::before {
+  height: 50%; /* Expand the gradient to cover bottom half on hover */
+}
+
+.founder_main:hover h3, .founder_main:hover p {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Additional styling for better visual */
+.founder_main h3 {
+  bottom: 50%; /* Positioning the h3 element */
+}
+
+.founder_main p {
+  bottom: 30%; /* Positioning the p element */
+}
+.about_heading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: rgb(40, 61, 54); /* Desired background color */
+  transition: width 0.5s ease; /* Smooth transition for width */
+  z-index: -1; /* Ensure the background is behind the text */
+}
+
+.about_heading:hover {
+  color: white; /* Change text color if needed */
+}
+
+.about_heading:hover::before {
+  width: 100%;
+}
+
+.Duia_founder_paragraph {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.get_in_touch {
+  text-align: center;
+}
+
+.office_location {
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.office_location {
+  width: 100%;
+}
+.founder_main {
+  text-align: center;
+}
+.team_members_parent {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.team_members_child {
+  text-align: center;
+  justify-content: center;
+}
+.team_members_child img {
+  text-align: center;
+}

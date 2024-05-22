@@ -2,6 +2,148 @@
 <html lang="en">
 
 <head>
+    <style>
+        .navbar {
+            position: fixed;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+
+        .navbar .logo img {
+            width: 100px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 5em;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            margin: 0;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            color: black;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: bold;
+            font-size: 20px;
+            letter-spacing: 2px;
+            font-style: normal;
+            font-variation-settings:
+                "slnt" 0;
+            text-decoration: none;
+            position: relative;
+            /* Positioning the link relative to its container */
+        }
+
+        .nav-links a::after {
+            content: '';
+            /* display: block; */
+            position: absolute;
+            bottom: -5px;
+            /* Adjust the distance of the line from the text */
+            left: 0;
+            width: 0;
+            height: 2px;
+            /* Height of the line */
+            background-color: aquamarine;
+            /* Color of the line */
+            transition: width 0.5s ease;
+            /* Transition for the line width */
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+            /* Width of the line when hovering */
+        }
+
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+        }
+
+        .nav-links-mobile {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: #333;
+        }
+
+        .nav-links-mobile.active {
+            display: flex;
+        }
+
+        .nav-links-mobile li {
+            text-align: center;
+            padding: 1em;
+        }
+
+        #mobile-logo {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .logo {
+                order: -1;
+            }
+        }
+    </style>
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -36,21 +178,11 @@
             setInterval(slideNext, 2000);
         });
     </script>
-    <!-- hamburgur -->
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById("menu-list");
-            if (menu.style.display === "block") {
-                menu.style.display = "none";
-            } else {
-                menu.style.display = "block";
-            }
-        }
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- hamburgur -->
+    <link rel="stylesheet" href="css/ecoruralstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha384-RqDpZR/8rKAVu9s7rSkji7uLRsa5/RGHD1RXE9sBao/5WqBS+Tp6Gp0DR2ZH1Uif" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
@@ -69,7 +201,7 @@
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUIA | TRAILBLAZER </title>
+    <title>ECO | RURAL | TOUR </title>
 </head>
 
 <body>
@@ -81,42 +213,106 @@
             <!-- Add more social media icons as needed -->
         </ul>
     </div>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo/Duia-Logo-png 1.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+                <a href="#destination" class="dropbtn">Destination</a>
+                <div class="dropdown-content">
+                    <a href="#place1">EAST KHASI HILLS</a>
+                    <a href="#place2">WEST JAINTIA HILLS</a>
+                    <a href="#place3">EAST JAINTIA HILLS</a>
+                    <a href="#place3">EAST GARO HILLS</a>
+                    <a href="#place3">NORTH GARO HILLS</a>
+                    <a href="#place3">SOUTH GARO HILLS</a>
+                    <a href="#place3">WEST GARO HILLS</a>
+                    <a href="#place3">SOUTH GARO HILLS</a>
+                </div>
+            </li>
+            <img src="images/logo/Duia-Logo-png 1.png" alt="">
+            <li><a href="#tour">Tour</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <ul class="nav-links-mobile">
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+            <a href="#destination" class="dropbtn">Destination</a>
+            <div class="dropdown-content">
+                <a href="#place1">Place 1</a>
+                <a href="#place2">Place 2</a>
+                <a href="#place3">Place 3</a>
+            </div>
+        </li>
+        <img id="mobile-logo" src="images/logo/Duia-Logo-png 1.png" alt="">
+        <li><a href="#tour">Tour</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links-mobile').classList.toggle('active');
+        });
+    </script>
     <div class="eco_rural_navbar_container">
-        <div class="navbar">
-            <nav>
-                <div class="logo">
-                    <img src="images/logo/Duia-Logo-png 2.png" alt="">
-                </div>
-                <div class="menu-toggle" onclick="toggleMenu()">
-                    <i class="fa fa-bars"></i>
-                </div>
-                <ul class="menu">
-
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">DESTINATION</a></li>
-                    <li><img src="images/logo/Duia-Logo-png 2.png" alt="">
-                    </li>
-                    <li><a href="#">TOURS</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                </ul>
-                <div class="list_of_items">
-                    <ul id="menu-list">
-                        <li><a href="">HOME</a></li> &nbsp;
-                        <li><a href="">DESTINATION</a></li> &nbsp;
-                        <li><a href="">TOURS</a></li> &nbsp;
-                        <li><a href="">CONTACT </a></li> &nbsp;
-                    </ul>
-                </div>
-            </nav>
+        <!-- <h1>Explore The <br> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Ordinary</i> </h1> -->
+        <div class="eco_para">
+            <P>Experience the authentic rural lifestyle in exclusive, untouched villages. Immerse yourself in the daily
+                lives of local communities, savor their traditional cuisine, and stay at cozy homestays or travelers' nests.
+                Explore the village with a knowledgeable local guide.</P>
         </div>
-        <div class="eco_rural_text_container">
-            <!-- <h1>Escape The <br> Ordinary</h1> -->
-            <p>Experience the authentic rural lifestyle in exclusive, untouched villages.</p>
-            <p>Immerse yourself in the daily lives of local communities, savor their </p>
-            <p>traditional cuisine, and stay at cozy homestays or travelers' nests. Explore</p>
-            <p>the village with a knowledgeable local guide.</p>
-        </div>
+        
+        
 
+        <script>
+            document.getElementById("tourForm").addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form data
+                const formData = new FormData(this);
+                const location = formData.get("location");
+                const date = formData.get("date");
+                const travelType = formData.get("travel_type");
+
+                // Dummy logic to generate recommended places (replace with actual logic)
+                let recommendedPlaces = [];
+
+                if (travelType === "Leisure") {
+                    recommendedPlaces.push("Shillong Peak");
+                    recommendedPlaces.push("Elephant Falls");
+                } else if (travelType === "Adventure") {
+                    recommendedPlaces.push("Cherrapunji");
+                    recommendedPlaces.push("Mawlynnong");
+                    recommendedPlaces.push("dabiang");
+                } else if (travelType === "Business") {
+                    recommendedPlaces.push("Shillong Golf Course");
+                    recommendedPlaces.push("Don Bosco Centre for Indigenous Cultures");
+                } else if (travelType === "Family") {
+                    recommendedPlaces.push("Ward's Lake");
+                    recommendedPlaces.push("Police Bazaar");
+                }
+                // Display recommended places
+                const recommendedPlacesDiv = document.getElementById("recommendedPlaces");
+                recommendedPlacesDiv.innerHTML = "<h3>Recommended Places:</h3>";
+                recommendedPlaces.forEach(place => {
+                    recommendedPlacesDiv.innerHTML += "<p>" + place + "</p>";
+                });
+            });
+        </script>
+    </div>
+    <div class="trees_image">
+        <img src="images/final_img/Group 41103.png" alt="">
+    </div>
+    <div class="space_between_trees">
 
     </div>
     <div class="kynthong_village">
@@ -125,10 +321,6 @@
         </div>
         <div class="kynthong_heading">
             <h2>Kynthong <br> Village </h2>
-            <!-- <p>Kongthong village which is also known as the "Whistling</p>
-            <p> Village" where people communicate by calling </p>
-            <p>each other's names with tunes. One can also hike up a peak or</p>
-            <p>visit the mesmerizing Living root bridges.</p> -->
             <p>Kongthong village which is also known as the "Whistling <br> Village" where people communicate by calling
                 <br>each other's names with tunes. <br> One can also hike up a peak or visit the mesmerizing Living root
                 bridges.
@@ -151,10 +343,6 @@
         </div>
         <div class="kynthong_heading">
             <h2>UMDEN VILLAGE</h2>
-            <!-- <p>Kongthong village which is also known as the "Whistling</p>
-            <p> Village" where people communicate by calling </p>
-            <p>each other's names with tunes. One can also hike up a peak or</p>
-            <p>visit the mesmerizing Living root bridges.</p> -->
             <p>Renowned for the 'Silk Tour,' showcasing the age-old craft of silk <br>weaving and natural dyeing,
                 preserving the silk worm. Delight in
                 <br>purchasing exquisite handlooms and handicrafts directly from <br>skilled local artisans. Explore
@@ -181,7 +369,6 @@
         <div class="kynthong_heading">
             <h2>WAHKHEN VILLAGE <br>
                 THAIN SYR-IA </h2>
-            <!-- <p>Wahkhen, a village rich in craftsmanship and folk art, is the  a pribirthplace of Thain Syr-ia (iarong),mitive skill of crafting natural fiber bags from various herbs, traditionally practiced by the women of the Khasi tribe for centuries.</p> -->
             <p>Wahkhen, a village rich in craftsmanship and folk art, is the <br>birthplace of Thain Syr-ia
                 (iarong),mitive skill of crafting
                 <br>natural fiber bags from various herbs, traditionally practiced by<br>the women of the Khasi tribe
@@ -195,9 +382,9 @@
 
     </div>
     <div class="img_container_ecorural_tour">
-        <img src="images/ECO_RURAL/imgrect.png" alt="">
+        <img src="images/ECO_RURAL/wahkhen4.png" alt="">
+        <img src="images/ECO_RURAL/wahkhen2.png" alt="">
         <img src="images/ECO_RURAL/wahkhen3.png" alt="">
-        <img src="images/ECO_RURAL/imgrect.png" alt="">
     </div>
     <div class="kynthong_village">
         <div class="kynthong_map">
@@ -205,7 +392,6 @@
         </div>
         <div class="kynthong_heading">
             <h2>SYNTEIN <br> VILLAGE </h2>
-            <!-- <p>Wahkhen, a village rich in craftsmanship and folk art, is the  a pribirthplace of Thain Syr-ia (iarong),mitive skill of crafting natural fiber bags from various herbs, traditionally practiced by the women of the Khasi tribe for centuries.</p> -->
             <p>Syntein Village's forest yields diverse fruits, plants, and <br> bamboo, crucial for crafting 'Knup'
                 headcovers. Artisans <br> weave in rainy summers, creating bamboo products <br> without additives.
                 Natural tinting develops over time, <br> while zero waste is ensured through scrap repurposing for <br>
@@ -218,9 +404,6 @@
     </div>
     <div class="syntein_img_container">
         <img src="images/ECO_RURAL/syntein2.png" alt="">
-        <!-- <img src="images/ECO_RURAL/imgrect.png" alt="">
-        <img src="images/ECO_RURAL/imgrect.png" alt="">
-        <img src="images/ECO_RURAL/imgrect.png" alt=""> -->
     </div>
     <div class="kynthong_village">
         <div class="kynthong_map">
@@ -228,7 +411,6 @@
         </div>
         <div class="kynthong_heading">
             <h2>LARNAI <br> VILLAGE </h2>
-            <!-- <p>Wahkhen, a village rich in craftsmanship and folk art, is the  a pribirthplace of Thain Syr-ia (iarong),mitive skill of crafting natural fiber bags from various herbs, traditionally practiced by the women of the Khasi tribe for centuries.</p> -->
             <p>Larnai village is renowned for Khiew Ranei pottery, <br> crafted by women using two clay types, Khyndew
                 Long <br> and Khyndew Khluit. They mix, mold, sun-dry, fire, and <br> color the pottery with Sohliya
                 tree bark, serving as <br> utensils, including for making Khasi pancakes called <br> ‘Pu Tharo’.</p>
@@ -251,7 +433,6 @@
                 Root Bridges. </p>
         </div>
         <div class="double_decker_living_root_bridges">
-            <!-- <h3>DOUBLE DECKER LIVING ROOT BRIDGE </h3> -->
             <h2>DOUBLE DECKER LIVING ROOT BRIDGE </h2>
             <p>The Double Decker Living Root Bridge, located in Nongriat village, is unique for its multi-level
                 formation, which took years to develop into these stunning examples of botanical architecture. Beginning
@@ -270,10 +451,12 @@
         </div>
         <div class="world_longest_living_root">
             <h2>WORLD’S LONGEST LIVING ROOT BRIDGE </h1>
-            <p>The Mawkyrnot living root bridge in Rangthylliang is an astonishing 53 meters long, making it the world's
-                longest of its kind. Crafted entirely from the roots of two ficus elastica trees planted on either side
-                of a river, it boasts remarkable strength, ensuring safe passage for all travelers.</p>
-            <img src="images/ECO_RURAL/Mawkyrnot Root Bridge (1) 1.png" alt="">
+                <p>The Mawkyrnot living root bridge in Rangthylliang is an astonishing 53 meters long, making it the
+                    world's
+                    longest of its kind. Crafted entirely from the roots of two ficus elastica trees planted on either
+                    side
+                    of a river, it boasts remarkable strength, ensuring safe passage for all travelers.</p>
+                <img src="images/ECO_RURAL/Mawkyrnot Root Bridge (1) 1.png" alt="">
         </div>
     </div>
 
@@ -283,17 +466,14 @@
         <img src="images/testimonials/testi1.png" alt="">
         <img src="images/testimonials/testi1.png" alt="">
     </div>
-    
+
     <footer class="footer">
         <div class="footer-columns">
-            <!-- Column 1: Image with text below -->
             <div class="footer-column">
                 <img src="images/logo/Duia-Logo-png 2.png" alt="Image" class="footer-image">
                 <p class="footer-image-text">© Duia Trailblazers 2024</p>
-                <p>Website Design & Developed By <a href="">Denise</a>  & <a href=""> Dabiang</a></p>
+                <p>Website Design & Developed By <a href="">Denise</a> & <a href=""> Dabiang</a></p>
             </div>
-    
-            <!-- Column 2: List items -->
             <div class="footer-column">
                 <ul>
                     <li><a href="AboutUs.html">ABOUT US</a></li> &nbsp;
@@ -301,7 +481,7 @@
                     <li><a href="">PRIVACY POLICY</a></li>&nbsp;
                 </ul>
             </div>
-    
+
             <!-- Column 3: Heading and paragraph -->
             <div class="footer-column3">
                 <h3>OFFICE</h3>
@@ -309,7 +489,7 @@
                     Shillong - 793001 <br>
                     Meghalaya</p>
             </div>
-    
+
             <!-- Column 4: Social media follow us -->
             <div class="footer-column4 social-media">
                 <span>CONNECT</span> <br> <br>
